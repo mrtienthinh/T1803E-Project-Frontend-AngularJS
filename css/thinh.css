@@ -1,0 +1,20 @@
+.carosel-home-1-t{
+    background-image: url(../Image/1-carosel.jpg);
+    height: 827px;
+    background-size: cover;
+}
+.carosel-home-2-t{
+    background-image: url(../Image/2-carosel.jpg);
+    height: 827px;
+    background-size: cover;
+}
+.carosel-home-3-t{
+    background-image: url(../Image/3-carosel.jpg);
+    height: 827px;
+    background-size: cover;
+}
+.carosel-home-4-t{
+    background-image: url(../Image/4-carosel.jpg);
+    height: 827px;
+    background-size: cover;
+}

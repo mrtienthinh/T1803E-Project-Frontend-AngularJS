@@ -1,0 +1,12 @@
+// var burgers = [{"id":1,"name":"Bacon Burger","price-1":19.99,"price-2":25.90,"imgUrl":"images/Bacon-Burger.png","mighty":"A mighty meaty double helping of all the reasons you love our burger."},
+// 	{"id":2,"name":"Cheese Butter","price-1":19.99,"price-2":25.90,"imgUrl":"images/Cheese-Butter.png","mighty":"A mighty meaty double helping of all the reasons you love our burger."},
+// 	{"id":3,"name":"Chicken burger","price-1":19.99,"price-2":25.90,"imgUrl":"images/Chicken-burger.png","mighty":"A mighty meaty double helping of all the reasons you love our burger."},
+// 	{"id":4,"name":"Chicken burger","price-1":19.99,"price-2":25.90,"imgUrl":"images/Chicken-burger.png","mighty":"A mighty meaty double helping of all the reasons you love our burger."},
+// 	{"id":5,"name":"Double Beef Burger","price-1":19.99,"price-2":25.90,"imgUrl":"images/Double-Beef-burger.png","mighty":"A mighty meaty double helping of all the reasons you love our burger."},
+// 	{"id":6,"name":"Double Cheese","price-1":19.99,"price-2":25.90,"imgUrl":"images/Double-Cheese.png","mighty":"A mighty meaty double helping of all the reasons you love our burger."},
+// 	{"id":7,"name":"Mushroom Burger","price-1":19.99,"price-2":25.90,"imgUrl":"images/Mushroom-Burger.png","mighty":"A mighty meaty double helping of all the reasons you love our burger."},
+// 	{"id":8,"name":"Original Burger","price-1":19.99,"price-2":25.90,"imgUrl":"images/Original-Burger.png","mighty":"A mighty meaty double helping of all the reasons you love our burger."},
+	
+// ];
+// for i =0 in burger :
+{"id":1,"name":"Bacon Burger","price-1":19.99,"price-2":25.90,"imgUrl":"images/Bacon-Burger.png","mighty":"A mighty meaty double helping of all the reasons you love our burger."}
