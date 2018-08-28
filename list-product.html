@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Pizzaro</title>
+	<!-- css -->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" media="all" />
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+	<link rel="stylesheet" type="text/css" href="css/font-pizzaro.css" media="all" />
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CYanone+Kaffeesatz:200,300,400,700" rel="stylesheet">
+	<link rel="shortcut icon" href="images/fav-icon.png">
+	<!-- css của các thành viên -->
+	<link rel="stylesheet" type="text/css" href="css/thinh.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="css/dat.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="css/hoan.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="css/an.css" media="all" />
+
+	<!-- Script -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+    <script src="js/ui-bootstrap-tpls-0.11.0.js"></script>
+
+
+	<!-- Script của các thành viên -->
+	<script type="text/javascript" src="js/thinh.js"></script>
+	<script type="text/javascript" src="js/hoan.js"></script>
+	<script type="text/javascript" src="js/dat.js"></script>
+	<script type="text/javascript" src="js/an.js"></script>
+</head>
+<body ng-app="shopApp" ng-controller="shopController">
+
+	<div class="container-fluid">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3 center-left-h" >
+					<ul>
+						<li class=" li-first-h" ng-click="choosepizza()"><i class="po po-pizza icon-i-h"></i>Pizza</li>
+						<li ng-click="chooseburgers()"> <i class="po po-burger icon-i-h"></i>Burgers</li>
+						<li ng-click="choosesalads()"> <i class="po po-salads icon-i-h"></i>Salads</li>
+						<li ng-click="choosetacos()"> <i class="po po-tacos icon-i-h"></i>Tacos</li>
+						<li ng-click="choosewraps()"><i class="po po-wraps icon-i-h"></i>Wraps</li>
+						<li ng-click="choosefries()"><i class="po po-fries icon-i-h" ></i>Fries</li>
+						<li ng-click="choosesalads()"><i class="po po-salads icon-i-h"></i>Salads</li>
+						<li  class=" li-last-h" ng-click="choosedrinks()" ><i class="po po-drinks icon-i-h"></i> Drinks</li>
+					</ul>
+					<div class="relative ">
+						<input ng-model="searchText" id="header_search_query" type="search" name="header_search_query" value="" placeholder="Search products" class="input-reset color-inherit input-focus all-animate br-pill ph4 sans-serif fw6 header-search-input ba bw1 bg-white-10 b--transparent"> <button type="submit" name="header_search_submit" class="button-reset color-inherit bg-transparent bn pa0 ma0 db o-60 absolute center-v right-1 pointer animate-all glow"><svg aria-hidden="true" data-prefix="fas" data-icon="search" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-search fa-w-16 fa-fw"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z" class=""></path></svg> <span class="sr-only">Search!</span></button>
+					</div>
+					<h2 class="Best-Deals-h">Best Deals</h2>
+					<div class="row" ng-repeat="b in bestDeals">
+						<div class="col-md-5 border-h">
+							<img src={{b.imgUrl[0].pic}} class="img-fluid">
+						</div>
+						<div class="col-md-6 border-h">
+							<h4 class="Orange-h">{{b.name}}</h4>
+							<p class="juice-h">£{{b.pricesmall}}</p>
+						</div>
+						
+					</div>
+				</div>
+				<div class="col-md-9 ">
+					<div class="row">
+						<div class="col-lg-4 col-md-6 col-sm-12 card-h" ng-repeat="p in products.slice(((currentPage-1)*itemsPerPage),((currentPage)*itemsPerPage)) | filter:searchText">
+							<p class="text-center"><img  src={{p.imgUrl[0].pic}} class="img-fluid" ></p>
+							<p class="Bacon-h text-center">{{p.name}}</p>
+							<p class="Pick-h text-center"><del>----------</del> <span>Pick Size</span> <del>----------</del></p>
+							<ul class="ul-money-h">
+								<li class="check-h">{{p.size[0].option}}<br>{{p.size[0].unit}}</li>
+								<li class="amount-of-money">£{{p.pricesmall}}</li>
+								<li class="check-h">{{p.size[1].option}}<br>{{p.size[1].unit}}</li>
+								<li class="amount-of-money">£{{p.pricebig}}</li>
+							</ul>
+							<div class="clear-h"></div>
+							<div class=" Select-Options-h">
+								<p class="Select-Options-P-h"><i class="far fa-check-circle"></i> Select Options</p>
+							</div>
+						</div>
+					</div>
+					<div class="row text-center">
+						<div class="col text-center">
+							<pagination total-items="totalItems" ng-model="currentPage" max-size="maxSize" boundary-links="true" rotate="false" num-pages="numPages" items-per-page="itemsPerPage"></pagination>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+</body>
+</html>
