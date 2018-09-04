@@ -11,11 +11,19 @@ ul,ol,li,a{list-style: none;padding:0;text-decoration: none;}
 	cursor: pointer;
 	padding-left: 40px;
 }
+.sidebar-list-page-t>li:first-child{
+	border-radius: 20px 20px 0px 0px;
+}
+.sidebar-list-page-t>li:last-child{
+	border-radius: 0px 0px 20px 20px;
+}
 .center-left-h li:hover{
-	background: #99081F;
+	background:  rgb(192, 10, 39);
 	border-radius:50px;
-	color: #fff;
 	font-weight: 600;
+}
+.center-left-h li:hover a{
+	color: #fff;
 }
 
 .Bacon-h{
@@ -63,20 +71,19 @@ ul,ol,li,a{list-style: none;padding:0;text-decoration: none;}
 	clear:both;
 }
 .check-h:hover{
-	background: #ff0;
+	background: orange;
+	border: 1px solid orange;
 	
 } 
-
-
 .card-h{
-	
 	height: 500px;
 	float: left;
+	margin-bottom: 10px;
 }
 .card-h:hover{
 	border: 2px solid  #E9E9E9
 }
-.card-h:hover>.Select-Options-h{
+.card-h:hover>a>.Select-Options-h{
 	display: block;
 }
 .li-first-h{
@@ -149,4 +156,81 @@ del{
 	color: #2d2b2d;
 	font-weight: 300;
 	margin-bottom: 20px;
+}
+/* combo offer */
+ul,ol,li,a{list-style: none;padding:0;text-decoration: none;}
+.container-h{
+	float: left;
+}
+.price {
+	border-bottom: #000 1px solid;
+	text-align: center;
+	max-width: 287px;
+	margin: 0 auto 25px;
+}
+.price span{
+	background-color: #fff;
+	padding: 0 10px;
+	font: normal 17px 'Open Sans', Arial, sans-serif;
+	bottom: -11px;
+	position: relative;
+	color: #000000;
+}
+.Select-Options-h{
+
+	width: 200px;
+	height: 50px;
+	border-radius:42px; 
+	border: 1px solid #E9E9E9;
+	background: red;
+	margin:20px auto;
+	display: none;
+
+
+	
+}
+.Select-Options-P-h{
+	text-align: center;
+	line-height: 50px;
+	color: #fff;
+}
+.container-h {
+	height: 420px;
+}
+.container-h:hover{
+	border: 2px solid  #E9E9E9;
+}
+.container-h:hover>.Select-Options-h{
+	display: block;
+	cursor: pointer;
+}
+.Page{
+
+	background: #fff;
+}
+.name-h{
+	font-size: 22px;
+	font-weight: 600;
+}
+
+@keyframes dich_chuyen {
+	0%   {top:-10px;}
+	50% {top:10px;}
+	100% {top:-10px;}
+}
+
+
+.container-h  a {
+	display: block;
+	position:relative;
+	text-align: center;
+	transition-duration: 1s;
+	cursor: pointer;
+} 
+
+.container-h  a:hover {
+	animation:dich_chuyen 1s infinite;
+} 
+.combo-offer-page-h{
+	margin-top: 100px;
 }
