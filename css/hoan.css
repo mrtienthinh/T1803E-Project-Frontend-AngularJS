@@ -153,3 +153,15 @@ del{
 .tex-h{
 	width: 100%;
 }
+.move-h{
+	width: 400px;
+	height: 50px;
+	margin: 0 auto;
+}
+.move-li{
+	float: left;
+	width: 50px;
+	height: auto;
+	background: #ff0;
+	line-height: 50px;
+}
