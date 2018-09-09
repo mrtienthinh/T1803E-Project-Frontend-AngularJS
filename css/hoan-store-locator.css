@@ -1,15 +1,26 @@
-ul,ol,li,a{list-style: none;padding:0;text-decoration: none;}
 
+ul,ol,li,a{list-style: none;padding:0; text-decoration: none;}
 
-.center-left-h li{
+.a-h{
+	color: #fff;
+	font-size: 14px;
+}
+.a-h:hover{
+	text-decoration: none;
+	color: #fff;
+}
+.li-menu{
 	width: 100%;
 	height: 50px;
 	border-bottom: 1px solid #E9E9E9;
-	background: #f7f7f7;
+	background: #009547;
 	line-height: 50px;
 	font-size: 18px;
 	cursor: pointer;
-	padding-left: 40px;
+
+	margin-bottom: 20px;
+	border-radius:50px;
+	color: #fff;
 }
 .center-left-h li:hover{
 	background: #99081F;
@@ -74,7 +85,7 @@ ul,ol,li,a{list-style: none;padding:0;text-decoration: none;}
 	float: left;
 }
 .li-first-h{
-	border-radius:20px 20px 0px 0px ;
+	/*border-radius:20px 20px 0px 0px ;*/
 }
 .li-last-h{
 	border-radius:0px 0px 20px 20px ;
@@ -97,20 +108,7 @@ ul,ol,li,a{list-style: none;padding:0;text-decoration: none;}
     margin-bottom: 46px;
 
 }
-input{
-	margin-top: 0px;
-    margin-left: 20px;
-    border: none;
-    width:147px;
-	height: 50px;
-	border-radius: 40px;
-	background:  #F7F7F7;
 
-}
-button{
-	border: none;
-	    color: #b4b4b4;
-}
 input:focus,button:focus{
 	outline: none;
 }
@@ -121,10 +119,7 @@ input:focus,button:focus{
 .Pick-h{
 	font-size: 14px;
 }
-del{
-	font-size: 12px;
-	opacity: 0.5
-}
+
 .Orange-h{
 	color: #C70A27;
 	font-size: 16px;
@@ -167,4 +162,37 @@ del{
 }
 .content-burger{
 	
+}
+.menu-detail-h{
+width: 100%;
+height: auto;
+background: #009145;
+	border-radius: 20px 20px 0px 0px;
+	/*margin: 20px 0px;*/
+/*	overflow:auto;*/
+padding-bottom: 1px;
+margin-bottom: 15px;
+
+}
+.detail-h3{
+	background: #00522C;
+	height: 50px;
+	width: 100%;
+	line-height: 50px;
+		border-radius:20px 20px 0px 0px ;
+		color: #fff;
+		font-size: 16px;
+
+}
+.address-h{
+	
+}
+.none-h{
+	display: none;
+}
+/*.block-h{
+	display: block;
+}*/
+.store-h{
+	margin-bottom: 30px;
 }
