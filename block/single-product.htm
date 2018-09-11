@@ -1,5 +1,13 @@
 <!-- Đây là block header -->
 <div ng-header-page></div>
+<!-- Đây là phần category  -->
+<div class="category-home-t">
+    <div class="container">
+        <ul class="row align-items-center">
+            <li ng-repeat="c in categorys" class="catagory-li-single-page-t col"><a class="catagory-link-single-page-t" href="#!/category/{{c.link}}"><i class={{c.icon}}></i>{{c.name}}</a></li>
+        </ul>
+    </div>
+</div>
 <!-- Đây là thanh điều hướng link trang -->
 <nav class="nav-single-link-t">
     <div class="container">
@@ -32,7 +40,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col">
+            <div class="col right-info-single-page-t">
                 <h1 class="name-product">{{product.name}}<i class="po po-veggie-icon"></i></h1>
                 <p class="describe-product">{{product.description}}</p>
                 <p class="share-product-single-page-t">
@@ -70,16 +78,12 @@
                         </div>
                         <div class="">
                             <div class="choose-quantity-single-page-t input-group">
-                                <div class="input-group-prepend">
-                                    <span class="btn btn-dark btn-sm" id="minus-btn-t" ng-click="quantitySelectItem = quantitySelectItem - 1"><i class="fa fa-minus"></i></span>
-                                </div>
-                                    <input ng-model="quantitySelectItem" type="number" id="qty_input-t" class="form-control form-control-sm text-center" value="1" min="1" ng-valid>
-                                <div class="input-group-prepend">
-                                    <span class="btn btn-dark btn-sm" id="plus-btn-t" ng-click="quantitySelectItem = quantitySelectItem + 1"><i class="fa fa-plus"></i></span>
-                                </div>
-                            </div>
-                            <div class="cart_div-t">
-                                <button type="submit" name="add-to-cart" value="50" class="single_add_to_cart_button-t">Add to cart</button>
+                                    <span id="minus-btn-t" ng-click="quantitySelectItem = quantitySelectItem - 1"><i class="fa fa-minus"></i></span>
+                                    <input ng-model="quantitySelectItem" type="number" id="qty_input-t" value="1" min="1" ng-valid inputmode="numeric" class="no-spinner">
+                                    <span id="plus-btn-t" ng-click="quantitySelectItem = quantitySelectItem + 1"><i class="fa fa-plus"></i></span>
+                                    <div class="cart_div-t">
+                                        <button type="submit" name="add-to-cart" value="50" class="single_add_to_cart_button-t">Add to cart</button>
+                                    </div>
                             </div>
                         </div>
                     </form>
@@ -89,7 +93,7 @@
     </div>
 </div>
 <!-- Đây là phần review và rating -->
-    <div class="container" style="margin-top: 100px;">
+    <div class="container choose-intfo-single-page-t" style="margin-top: 100px;">
         <div class="row">
             <div class="col"></div>
             <div class="list-group choosetab-single-page-t col" id="list-tab" role="tablist">
@@ -120,7 +124,7 @@
                                     <input ng-model="review.reply" type="checkbox" class="form-check-input" id="rating-form-Check1">
                                     <label class="form-check-label" for="rating-form-Check1">I need reply</label>
                                 </div>
-                                    <button ng-click="submitreviewproduct()" class="btn btn-primary">Submit</button>
+                                    <button ng-click="submitreviewproduct()" class="btn btn-primary w-100">Submit</button>
                             </div>
                             <div class="col-8 text-center form-group">
                                 <label for="rating-review-form-Input-t" class="d-block">Your review about {{product.name}}</label>
@@ -133,4 +137,13 @@
         </div>
     </div>
 <!-- Đây là block footer -->
+<div class="row">
+        <div class="col d1-pagegalary"><img src=images/gallery02.jpg width=100% height="200px"></div>
+        <div class="col d1-pagegalary"><img src=images/gallery03.jpg width=100% height="200px"></div>
+        <div class="col d1-pagegalary"><img src=images/gallery04.jpg width=100% height="200px"></div>
+        <div class="col d1-pagegalary"><img src=images/gallery05.jpg width=100% height="200px"></div>
+        <div class="col d1-pagegalary"><img src=images/gallery06.jpg width=100% height="200px"></div>
+        <div class="col d1-pagegalary"><img src=images/gallery06.jpg width=100% height="200px"></div>
+    </div>
+</div>
 <div ng-footer-page></div>

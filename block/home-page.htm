@@ -1,5 +1,17 @@
 <!-- Đây là block header -->
 <div ng-header-page></div>
+<!-- Header nav trang chủ và trang single page -->
+<div class="category-home-t">
+    <div class="container">
+        <ul class="row align-items-center">
+            <li class="catagory-li-single-page-t col"><a class="catagory-link-single-page-t" href="#!/combo"><i class="po po-fries icon-i-h"></i>Combo</a></li>
+            <li class="catagory-li-single-page-t col"><a class="catagory-link-single-page-t" href="#!/weekendspecial"><i class="po po-best-quality icon-i-h"></i>Weekend</a></li>
+            <li class="catagory-li-single-page-t col"><a class="catagory-link-single-page-t" href="#!/galary"><i class="po po-master-chef icon-i-h"></i>Gallery</a></li>
+            <li class="catagory-li-single-page-t col"><a class="catagory-link-single-page-t" href="#!/franchise"><i class="po po-load-more-icon icon-i-h"></i>Franchise</a></li>
+            <li class="catagory-li-single-page-t col"><a class="catagory-link-single-page-t" href="#!/storelocation"><i class="po po-store-locator-menu icon-i-h"></i>Location</a></li>
+        </ul>
+    </div>
+</div>
 <!-- Đây là nội dung của homepage -->
 <div id="carousel-home-t" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
@@ -46,7 +58,8 @@
     </div>
 </div>
 <div class="container product-binding-home-page-t">
-    <div class="row mt-4 mb-5">
+    <div class="row mt-5 mb-5 position-relative" ng-init="countupitem=1">
+        <i class="po po-arrow-left-slider po-arrow-left-slider-item position-absolute" ng-click="choiceitem()"></i>
         <div class="col-lg-4 col-md-6 col-sm-12 card-h" ng-repeat="p in products.slice(countupitem,countupitem+3) | filter:searchText">
             <a href="#!/product/{{linkcategory}}/{{p.id}}">
             <p class="text-center"><img  src={{p.imgUrl[0].pic}} class="img-fluid" ></p>
@@ -64,7 +77,135 @@
             </div>
             </a>
         </div>
+        <i class="po po-arrow-right-slider po-arrow-right-slider-item position-absolute" ng-click="choiceitemnext()"></i>
     </div>
 </div> 
+<div class="container-fluid main-content-home-page-t">
+    <div class="container">
+        <div class="row main-one-pizza-home-page-t">
+            <div class="col-1"></div>
+            <div class="col-5 text-center card-h">
+                <a href="#!/product/pizza">
+                    <h4 class="text-uppercase border-bottom d-inline">The Original</p>
+                    <h3 class="text-uppercase display-1 font-weight-normal">Chicken</h3>
+                    <h4 class="text-uppercase display-3 mt-1">Burger</h4>
+                    <h5 class="text-uppercase mt-1">Bigger & Bolder</h5>
+                    <p>Extra-virgin olive oil, garlic, mozzarella cheese, onions, mushrooms, green olives, black olives, fresh tomatoes.</p>
+                    <p class="Pick-h text-center"><del>----------------------------</del> <span>Pick Size</span> <del>----------------------------</del></p>
+                    <ul class="ul-money-h">
+                        <li class="check-h">22<br>cm</li>
+                        <li class="amount-of-money">£19.99</li>
+                        <li class="check-h">29<br>cm</li>
+                        <li class="amount-of-money">£25.99</li>
+                    </ul>
+                    <div class="clear-h"></div>
+                    <div class=" Select-Options-h">
+                        <p class="Select-Options-P-h"><i class="far fa-check-circle"></i> Select Options</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-6"></div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid main-2-content-home-page-t">
+    <div class="container">
+        <div class="row">
+            <div class="col mr-1">
+                <img src="images/homepage-img-main-2.jpg" alt="">
+            </div>
+            <div class="col ">
+                <h2 class="text-danger">A little Hot or Cold?</h2>
+                <h3 class="sub-title">Pick your own treatment</h3>
+                <ul class="row position-relative" ng-init="nextitemdrink=1">
+                    <i class="po po-arrow-left-slider po-arrow-left-slider-drink" ng-click="choicedrinkitem()"></i>
+                    <li class="col-4" ng-repeat="c in best_deals.slice(nextitemdrink,nextitemdrink+3)">
+                        <a href="#!/category/beverages">
+                        <p class="text-center"><img  src={{c.imgUrl[0].pic}} class="img-fluid" ></p>
+                        <p class="text-center">{{c.name}}</p>
+                        </a>
+                    </li>
+                    <i class="po po-arrow-right-slider po-arrow-right-slider-drink " ng-click="choicedrinkitemnext()"></i>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid main-3-content-home-page-t">
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+            </div>
+            <div class="col-8 ">
+                <div class="row text-center">
+                    <div class="col">
+                        <h5 class="text-uppercase text-light position-relative">This week local menu</h5>
+                        <h1 class="text-uppercase text-light display-1">For Breakfast</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <table class="table text-light">
+                            <tbody>
+                                <tr>
+                                    <td class="text-uppercase text-warning">Ham & Cheese<br>Omelette </td>
+                                    <td class="text-right text-warning">9<span class="cent-money-homepage-t">95</span></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">Ricotta, sun dried tomatoes, garlic, mozzarella cheese, topped with lightly.</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-uppercase text-warning">Loaded Veggie<br>Omelette </td>
+                                    <td class="text-right text-warning">16<span class="cent-money-homepage-t">95</span></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">Tender chicken, onion, capsicum and stretchy mozzarella, topped off with an apricot swirl.</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-uppercase text-warning">Steak & Eggs<br>Omelette </td>
+                                    <td class="text-right text-warning">5<span class="cent-money-homepage-t">95</span></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">Mouth watering pepperoni, cabanossi, mushroom, capsicum, black olives and stretchy mozzarella, seasoned with garlic and oregano..</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col">
+                        <table class="table text-light">
+                            <tbody>
+                                <tr>
+                                    <td class="text-uppercase text-warning" colspan="2">Peanut Butter<br>Cup Pancake </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-uppercase">With Cheese</td>
+                                    <td class="text-right text-warning">4<span class="cent-money-homepage-t">95</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-uppercase">With Double Cheese</td>
+                                    <td class="text-right text-warning">5<span class="cent-money-homepage-t">95</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-uppercase text-warning">Hearty Breakfast<br>Skillet </td>
+                                    <td class="text-right text-warning">12<span class="cent-money-homepage-t">95</span></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">Tender chicken, onion, capsicum and stretchy mozzarella, topped off.</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-uppercase text-warning">Bruschetta</td>
+                                    <td class="text-right text-warning">5<span class="cent-money-homepage-t">95</span></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">Tender chicken, onion, capsicum and stretchy mozzarella.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <!-- Đây là block footer -->
 <div ng-footer-page></div>

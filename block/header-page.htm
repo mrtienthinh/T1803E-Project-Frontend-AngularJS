@@ -26,17 +26,18 @@
                     <a href="#">Pages<i class="fas fa-caret-down"></i></a>
                     <div class="dropdown-header-pages-div-t">
                         <ul class="nav flex-column">
-                            <a href="#"><li class="nav-item">Location</li></a>
+                            <a href="#!/location"><li class="nav-item">Location</li></a>
                             <a href="#!/combo"><li class="nav-item">Combo</li></a>
-                            <a href="#!/franchise"><li class="nav-item">Franchise Info</li></a>
                             <a href="#!/weekendspecial"><li class="nav-item">Weekend Special</li></a>
-                            <a href="#!/galary"><li class="nav-item">Galary</li></a>
-                            <a href="#"><li class="nav-item">Store Location</li></a>
+                            <a href="#!/franchise"><li class="nav-item">Franchise Info</li></a>
+                            <a href="#!/galary"><li class="nav-item">Gallery</li></a>
+                            <a href="#!/storelocation"><li class="nav-item">Store Location</li></a>
+                            <a href="#!/contact"><li class="nav-item">Contact Us</li></a>
                         </ul>
                     </div>
                 </li>
                 <li class="nav-item col">
-                    <a href="#">Store Location</a>
+                    <a href="#!/storelocation">Store Location</a>
                 </li>
                 <li class="nav-item col dropdown-header-cart-t">
                     <a href="#" class="cart-link-home-t d-inline">
@@ -51,10 +52,3 @@
         </nav>
     </div>
 </header>
-<div class="category-home-t">
-    <div class="container">
-        <ul class="row align-items-center">
-            <li ng-repeat="c in categorys" class="catagory-li-single-page-t col"><a class="catagory-link-single-page-t" href="#!/category/{{c.link}}"><i class={{c.icon}}></i>{{c.name}}</a></li>
-        </ul>
-    </div>
-</div>

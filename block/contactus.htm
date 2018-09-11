@@ -1,0 +1,123 @@
+<!-- Đây là block header-page -->
+<div ng-header-page></div>
+<!-- Đây là phần category  -->
+<div class="category-home-t">
+    <div class="container">
+        <ul class="row align-items-center">
+            <li ng-repeat="c in categorys" class="catagory-li-single-page-t col"><a class="catagory-link-single-page-t" href="#!/category/{{c.link}}"><i class={{c.icon}}></i>{{c.name}}</a></li>
+        </ul>
+    </div>
+</div>
+<!-- Đây là phần contact form chính -->
+<div class="contact-page-t">
+    <div class="container-fluid">
+        <div class="row">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d14896.654226533243!2d105.79194457516888!3d21.026140723378596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x3135ab4984052283%3A0x405da29983542b07!2zVmnhu4duIEh1eeG6v3QgSOG7jWMgLSBUcnV54buBbiBNw6F1IFRydW5nIMawxqFuZywgUGjhuqFtIFbEg24gQuG6oWNoLCBZw6puIEhvw6AsIEPhuqd1IEdp4bqleSwgSMOgIE7hu5lpLCBWaeG7h3QgTmFt!3m2!1d21.0250995!2d105.78833379999999!5e0!3m2!1svi!2s!4v1536466771095"
+             frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+    </div>
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="d-block display-5">Contact Us</h1>
+                <p>We are a second-generation family business established in 1972</p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-8 form-contact-page-t container">
+                <h2>Leave us a Message</h2>
+                <p>Aenean massa diam, viverra vitae luctus sed, gravida eget est. Etiam nec ipsum porttitor, consequat
+                    libero eu,
+                    dignissim eros. Nulla auctor lacinia enim id mollis.</p>
+                <div class="row no-gutters">
+                    <div class="col">
+                        <label for="first-name-form-contact-page-t">
+                            <h4>First name*</h4>
+                        </label><br>
+                        <input type="text" id="first-name-form-contact-page-t">
+                    </div>
+                    <div class="col">
+                        <label for="last-name-form-contact-page-t">
+                            <h4>Last name*</h4>
+                        </label><br>
+                        <input type="text" id="last-name-form-contact-page-t">
+                    </div>
+                </div>
+                <div class="row no-gutters">
+                    <div class="col">
+                        <label for="subject-form-contact-page-t">
+                            <h4>Subject*</h4>
+                        </label><br>
+                        <input type="text" id="subject-form-contact-page-t">
+                    </div>
+                </div>
+                <div class="row no-gutters">
+                    <div class="col">
+                        <label for="message-name-form-contact-page-t">
+                            <h4>Your Message*</h4>
+                        </label><br>
+                        <textarea id="message-name-form-contact-page-t" rows="9" cols="40"></textarea>
+                    </div>
+                </div>
+                <button type="submit" name="submit-form-contact-page-t" id="submit-form-contact-page-t" class="submit-form-contact-page-t">Send
+                    Message</button>
+            </div>
+            <div class="col-4">
+                <h2 >Our Address</h2>
+                <p>17 Princess Road London, Greater London NW1 8JR, UK<br>
+                    Support (+800) 856 800 604<br>
+                    E-mail: info@pizzaro.com</p>
+                <h3>Opening Hours</h3>
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <td>Monday</td>
+                            <td>12-6 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Tuesday</td>
+                            <td>12-6 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Wednesday</td>
+                            <td>12-6 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Thursday</td>
+                            <td>12-6 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Friday</td>
+                            <td>12-6 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Saturday</td>
+                            <td>12-6 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Sunday</td>
+                            <td>Closed</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h3>Careers</h3>
+                <p>If you are interested in employment opportunities at Pizzaro, please email us: </p>
+                <p class="text-danger"> <a href="mailto:contact@yourstore.com" target="_top" class="text-danger">
+                        contact@yourstore.com</a></p>
+            </div>
+        </div>
+    </div>
+    <div class="row div-img-contact-page-t">
+            <div class="col d1-pagegalary"><img src=images/gallery02.jpg width=100% height="200px"></div>
+            <div class="col d1-pagegalary"><img src=images/gallery03.jpg width=100% height="200px"></div>
+            <div class="col d1-pagegalary"><img src=images/gallery04.jpg width=100% height="200px"></div>
+            <div class="col d1-pagegalary"><img src=images/gallery05.jpg width=100% height="200px"></div>
+            <div class="col d1-pagegalary"><img src=images/gallery06.jpg width=100% height="200px"></div>
+            <div class="col d1-pagegalary"><img src=images/gallery06.jpg width=100% height="200px"></div>
+        </div>
+    </div>
+</div> 
+<!-- Đây là block footer-page -->
+<div ng-footer-page></div>

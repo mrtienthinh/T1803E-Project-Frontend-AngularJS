@@ -1,5 +1,13 @@
 <!-- Đây là block header -->
 <div ng-header-page></div>
+<!-- Đây là phần category  -->
+<div class="category-home-t">
+    <div class="container">
+        <ul class="row align-items-center">
+            <li ng-repeat="c in categorys" class="catagory-li-single-page-t col"><a class="catagory-link-single-page-t" href="#!/category/{{c.link}}"><i class={{c.icon}}></i>{{c.name}}</a></li>
+        </ul>
+    </div>
+</div>
 <!-- Đây là block Garaly  -->
 <div class="container-fluid d">
     <div class="row">
@@ -13,176 +21,121 @@
         <br></div>
     <div class="container d">
         <div class="row">
-            <div class="col-sm">
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="images/gallery02.jpg" alt="Card image cap">
-                    <div class="card-body">
-                        <h3> Taste Driven </h3>
-                        <p class="card-text text-justify">
-                            Mauris tempus erat laoreet turpis lobortis, eu tincidunt erat fermentum. Aliquam non tincidunt urna. Integer tincidunt nec
-                            nisl vitae ullamcorper. Proin sed ultrices erat.</p>
+            <div class="container-gallary-d">
+                <div class="box-gallary-d">
+                    <div class="imgBox-gallary-d">
+                        <img src="images/gallery02.jpg">
+                    </div>
+                    <div class="content-gallary-d">
+                        <h2>Taste Driven</h2>
+                        <p>Mauris tempus erat laoreet turpis lobortis, eu tincidunt erat fermentum. Aliquam non tincidunt urna. Integer tincidunt nec nisl vitae ullamcorper. Proin sed ultrices erat. </p>
                     </div>
                 </div>
-            </div>
-            <div class="col-sm">
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="images/gallery03.jpg" alt="Card image cap">
-                    <div class="card-body">
-                        <h3>Made the Quality Way</h3>
-                        <p class="card-text text-justify">
-                            Mauris tempus erat laoreet turpis lobortis, eu tincidunt erat fermentum.<br> Be Bold // Do Everything Better<br> Be
-                            Open // Work Stronger Together.
-                        </p>
+                <div class="box-gallary-d">
+                    <div class="imgBox-gallary-d">
+                        <img src="images/gallery03.jpg">
+                    </div>
+                    <div class="content-gallary-d">
+                        <h2>Made the Quality Way</h2>
+                        <p>	Mauris tempus erat laoreet turpis lobortis, eu tincidunt erat fermentum.
+					    	Be Bold // Do Everything Better
+					    	Be Open // Work Stronger Together. </p>
                     </div>
                 </div>
-            </div>
-            <div class="col-sm">
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="images/gallery04.jpg" alt="Card image cap">
-                    <div class="card-body">
-                        <h3>Family of Creators</h3>
-                        <p class="card-text text-justify">Mauris tempus erat laoreet turpis lobortis, eu tincidunt erat fermentum. Aliquam non tincidunt
-                            urna. Integer tincidunt nec nisl vitae ullamcorper. Proin sed ultrices erat.</p>
+                <div class="box-gallary-d">
+                    <div class="imgBox-gallary-d">
+                        <img src="images/gallery04.jpg">
+                    </div>
+                    <div class="content-gallary-d">
+                        <h2>Family of Creators</h2>
+                        <p>Mauris tempus erat laoreet turpis lobortis, eu tincidunt erat fermentum. Aliquam non tincidunt urna. Integer tincidunt nec nisl vitae ullamcorper. Proin sed ultrices erat. </p>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm">
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="images/gallery05.jpg" alt="Card image cap">
-                    <div class="card-body">
-                        <h3> Taste Driven </h3>
-                        <p class="card-text text-justify">
-                            Mauris tempus erat laoreet turpis lobortis, eu tincidunt erat fermentum. Aliquam non tincidunt urna. Integer tincidunt nec
-                            nisl vitae ullamcorper. Proin sed ultrices erat.</p>
+                <div class="box-gallary-d">
+                    <div class="imgBox-gallary-d">
+                        <img src="images/gallery05.jpg">
+                    </div>
+                    <div class="content-gallary-d">
+                        <h2>Taste Driven</h2>
+                        <p>Mauris tempus erat laoreet turpis lobortis, eu tincidunt erat fermentum. Aliquam non tincidunt urna. Integer tincidunt nec nisl vitae ullamcorper. Proin sed ultrices erat.</p>
                     </div>
                 </div>
-            </div>
-            <div class="col-sm">
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="images/gallery06.jpg" alt="Card image cap">
-                    <div class="card-body">
-                        <h3>Made the Quality Way</h3>
-                        <p class="card-text text-justify">
-                            Mauris tempus erat laoreet turpis lobortis, eu tincidunt erat fermentum.<br> Be Bold // Do Everything Better<br> Be
-                            Open // Work Stronger Together.
-                        </p>
+                <div class="box-gallary-d">
+                    <div class="imgBox-gallary-d">
+                        <img src="images/gallery06.jpg">
+                    </div>
+                    <div class="content-gallary-d">
+                        <h2>Made the Quality Way</h2>
+                        <p>Mauris tempus erat laoreet turpis lobortis, eu tincidunt erat fermentum.
+					    	Be Bold // Do Everything Better
+					    	Be Open // Work Stronger Together. </p>
                     </div>
                 </div>
-            </div>
-            <div class="col-sm">
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="images/gallery07.jpg" alt="Card image cap">
-                    <div class="card-body">
-                        <h3>Family of Creators</h3>
-                        <p class="card-text text-justify">Mauris tempus erat laoreet turpis lobortis, eu tincidunt erat fermentum. Aliquam non tincidunt
-                            urna. Integer tincidunt nec nisl vitae ullamcorper. Proin sed ultrices erat.</p>
+                <div class="box-gallary-d">
+                    <div class="imgBox-gallary-d">
+                        <img src="images/gallery07.jpg">
+                    </div>
+                    <div class="content-gallary-d">
+                        <h2>Family of Creators</h2>
+                        <p>Mauris tempus erat laoreet turpis lobortis, eu tincidunt erat fermentum. Aliquam non tincidunt urna. Integer tincidunt nec nisl vitae ullamcorper. Proin sed ultrices erat.</p>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm">
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="images/gallery08.jpg" alt="Card image cap">
-                    <div class="card-body">
-                        <h3> Taste Driven </h3>
-                        <p class="card-text text-justify">
-                            Mauris tempus erat laoreet turpis lobortis, eu tincidunt erat fermentum. Aliquam non tincidunt urna. Integer tincidunt nec
-                            nisl vitae ullamcorper. Proin sed ultrices erat.</p>
+                <div class="box-gallary-d">
+                    <div class="imgBox-gallary-d">
+                        <img src="images/gallery08.jpg">
+                    </div>
+                    <div class="content-gallary-d">
+                        <h2>Taste Driven</h2>
+                        <p>Mauris tempus erat laoreet turpis lobortis, eu tincidunt erat fermentum. Aliquam non tincidunt urna. Integer tincidunt nec nisl vitae ullamcorper. Proin sed ultrices erat. </p>
                     </div>
                 </div>
-            </div>
-            <div class="col-sm">
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="images/gallery09.jpg" alt="Card image cap">
-                    <div class="card-body">
-                        <h3>Made the Quality Way</h3>
-                        <p class="card-text text-justify">
-                            Mauris tempus erat laoreet turpis lobortis, eu tincidunt erat fermentum.<br> Be Bold // Do Everything Better<br> Be
-                            Open // Work Stronger Together.
-                        </p>
+                <div class="box-gallary-d">
+                    <div class="imgBox-gallary-d">
+                        <img src="images/gallery09.jpg">
+                    </div>
+                    <div class="content-gallary-d">
+                        <h2>Made the Quality Way</h2>
+                        <p>Mauris tempus erat laoreet turpis lobortis, eu tincidunt erat fermentum.
+                            Be Bold // Do Everything Better
+                            Be Open // Work Stronger Together. </p>
                     </div>
                 </div>
-            </div>
-            <div class="col-sm">
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="images/gallery10.jpg" alt="Card image cap">
-                    <div class="card-body">
-                        <h3>Family of Creators</h3>
-                        <p class="card-text text-justify">Mauris tempus erat laoreet turpis lobortis, eu tincidunt erat fermentum. Aliquam non tincidunt
-                            urna. Integer tincidunt nec nisl vitae ullamcorper. Proin sed ultrices erat.</p>
+                <div class="box-gallary-d">
+                    <div class="imgBox-gallary-d">
+                        <img src="images/gallery10.jpg">
+                    </div>
+                    <div class="content-gallary-d">
+                        <h2>Family of Creators</h2>
+                        <p>Mauris tempus erat laoreet turpis lobortis, eu tincidunt erat fermentum. Aliquam non tincidunt urna. Integer tincidunt nec nisl vitae ullamcorper. Proin sed ultrices erat.</p>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm">
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="images/gallery11.jpg" alt="Card image cap">
-                    <div class="card-body">
-                        <h3> Taste Driven </h3>
-                        <p class="card-text text-justify">
-                            Mauris tempus erat laoreet turpis lobortis, eu tincidunt erat fermentum. Aliquam non tincidunt urna. Integer tincidunt nec
-                            nisl vitae ullamcorper. Proin sed ultrices erat.</p>
+                <div class="box-gallary-d">
+                    <div class="imgBox-gallary-d">
+                        <img src="images/gallery11.jpg">
+                    </div>
+                    <div class="content-gallary-d">
+                        <h2>Taste Driven</h2>
+                        <p>Mauris tempus erat laoreet turpis lobortis, eu tincidunt erat fermentum. Aliquam non tincidunt urna. Integer tincidunt nec nisl vitae ullamcorper. Proin sed ultrices erat. </p>
                     </div>
                 </div>
-            </div>
-            <div class="col-sm">
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="images/gallery12.jpg" alt="Card image cap">
-                    <div class="card-body">
-                        <h3>Made the Quality Way</h3>
-                        <p class="card-text text-justify">
-                            Mauris tempus erat laoreet turpis lobortis, eu tincidunt erat fermentum.<br> Be Bold // Do Everything Better<br> Be
-                            Open // Work Stronger Together.
-                        </p>
+                <div class="box-gallary-d">
+                    <div class="imgBox-gallary-d">
+                        <img src="images/gallery12.jpg">
+                    </div>
+                    <div class="content-gallary-d">
+                        <h2>Made the Quality Way</h2>
+                        <p>Mauris tempus erat laoreet turpis lobortis, eu tincidunt erat fermentum.
+                            Be Bold // Do Everything Better
+                            Be Open // Work Stronger Together. </p>
                     </div>
                 </div>
-            </div>
-            <div class="col-sm">
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="images/gallery13.jpg" alt="Card image cap">
-                    <div class="card-body">
-                        <h3>Family of Creators</h3>
-                        <p class="card-text text-justify">Mauris tempus erat laoreet turpis lobortis, eu tincidunt erat fermentum. Aliquam non tincidunt
-                            urna. Integer tincidunt nec nisl vitae ullamcorper. Proin sed ultrices erat.</p>
+                <div class="box-gallary-d">
+                    <div class="imgBox-gallary-d">
+                        <img src="images/gallery13.jpg">
                     </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm">
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="images/gallery14.jpg" alt="Card image cap">
-                    <div class="card-body">
-                        <h3> Taste Driven </h3>
-                        <p class="card-text text-justify">
-                            Mauris tempus erat laoreet turpis lobortis, eu tincidunt erat fermentum. Aliquam non tincidunt urna. Integer tincidunt nec
-                            nisl vitae ullamcorper. Proin sed ultrices erat.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm">
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="images/gallery08.jpg" alt="Card image cap">
-                    <div class="card-body">
-                        <h3>Made the Quality Way</h3>
-                        <p class="card-text text-justify">
-                            Mauris tempus erat laoreet turpis lobortis, eu tincidunt erat fermentum.<br> Be Bold // Do Everything Better<br> Be
-                            Open // Work Stronger Together.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm">
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="images/gallery06.jpg" alt="Card image cap">
-                    <div class="card-body">
-                        <h3>Family of Creators</h3>
-                        <p class="card-text text-justify">Mauris tempus erat laoreet turpis lobortis, eu tincidunt erat fermentum. Aliquam non tincidunt
-                            urna. Integer tincidunt nec nisl vitae ullamcorper. Proin sed ultrices erat.</p>
+                    <div class="content-gallary-d">
+                        <h2>Family of Creators</h2>
+                        <p>Mauris tempus erat laoreet turpis lobortis, eu tincidunt erat fermentum. Aliquam non tincidunt urna. Integer tincidunt nec nisl vitae ullamcorper. Proin sed ultrices erat.</p>
                     </div>
                 </div>
             </div>

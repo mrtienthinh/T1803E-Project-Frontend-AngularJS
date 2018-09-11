@@ -8,7 +8,6 @@ shopApp.run(function($rootScope,$http){
         var $categorys = response.data.data.categorys;
         var $combo_ofers = response.data.data.combo_ofers;
         var $best_deals = response.data.data.best_deals;
-        console.log(response.data.data.best_deals);
         $rootScope.categorys = $categorys;
         $rootScope.combo_ofers = $combo_ofers;
         $rootScope.best_deals = $best_deals;
@@ -64,6 +63,14 @@ shopApp.config(['$routeProvider',function($routeProvider) {
         templateUrl: "block/galary.htm",
         controller: "galaryController"
     })
+    .when("/contact",{
+        templateUrl: "block/contactus.htm",
+        controller: "contactController"
+    })
+    .when("/storelocation",{
+        templateUrl: "block/store-location.htm",
+        controller: "storelocationController"
+    })
     .otherwise({ redirectTo: '/' });
 }]);
 // Dùng controller đề điều khiển các block
@@ -112,7 +119,26 @@ shopApp.controller("shopController", function($rootScope,$scope,$routeParams){
     };
     $scope.countupitem = 0
     
-
+    $scope.choicedrinkitem = function(){
+        if($scope.nextitemdrink>1){
+            $scope.nextitemdrink = $scope.nextitemdrink-1;
+        };
+    }
+    $scope.choicedrinkitemnext = function(){
+        if($scope.nextitemdrink<3){
+            $scope.nextitemdrink = $scope.nextitemdrink+1;
+        };
+    }
+    $scope.choiceitem = function(){
+        if($scope.countupitem>1){
+            $scope.countupitem = $scope.countupitem-1;
+        };
+    }
+    $scope.choiceitemnext = function(){
+        if($scope.countupitem<$scope.products.length-3){
+            $scope.countupitem = $scope.countupitem+1;
+        };
+    }
 });
 shopApp.controller("listController", function($rootScope,$scope,$routeParams){
     // Chọn loại category để khai báo biến products
@@ -190,7 +216,7 @@ shopApp.controller("productController", function($rootScope,$scope,$routeParams,
     $scope.submitreviewproduct = function(){
 		$http({
 			method: 'POST',
-			url: 'http://localhost:3000/review',
+			url: 'http://localhost/project/js/review.json',
             data: $.param({
                     email_reviewer: $scope.review.email, 
                     needreply: $scope.review.reply, 
@@ -226,6 +252,11 @@ shopApp.controller("weekenspecialController", function($rootScope,$scope,$routeP
 });
 shopApp.controller("galaryController", function($rootScope,$scope,$routeParams){
 });
+shopApp.controller("contactController", function($rootScope,$scope,$routeParams){
+});
+shopApp.controller("storelocationController", function($rootScope,$scope,$routeParams){
+    $(document).ready(storelocation());
+});
 // jquery
 $('.carousel').carousel({
     interval: 3000
@@ -248,33 +279,74 @@ $(document).ready(function () {
 });
 // Thử nghiệm ở trang rating.html
 shopApp.controller("tryhard", function($rootScope,$scope,$routeParams){
-    // Chọn loại category để khai báo biến products
-
-    $routeParams.linkcategory="pizzas";
-    $scope.linkcategory = $routeParams.linkcategory;
-    if(typeof $routeParams.linkcategory !== "undefined"){
-		angular.forEach($rootScope.categorys,function(category){
-			if(category.link == $routeParams.linkcategory){
-                $scope.products = category.products;
-                $scope.nameCategory = category.name;
-			};		
-		});
-    };
-    // Funtion cho phân trang
-    $scope.viewby = 10;
-    $scope.totalItems = $scope.products.length;
-    $scope.currentPage = 1;
-    $scope.itemsPerPage = 9;
-    $scope.maxSize = 5; //Number of pager buttons to show
-    $scope.pageChanged = function() {
-      console.log('Page changed to: ' + $scope.currentPage);
-    };
-    // Funtion chọn trang thì scrollup lên đầu
-    $scope.scrollupChoosePage = function(){
-        $("html, body").animate({
-            scrollTop: 100
-        }, 600);
-    }
-    // Funtion chọn các sản phẩm vào giỏ hàng
 
 });
+// jquery trang store location
+function storelocation(){
+    $('.li-first-h').click(function(){
+        if ($('#hn-h').hasClass('none-h')) {
+            $('#k-h').addClass('none-h');
+            $('#hcm-h').addClass('none-h');
+            $('#hn-h').removeClass('none-h');
+            $('.li-menu').css("background",'');
+            $('.li-first-h').css("background",'red');
+        }
+        else{
+            
+            $('#k-h').addClass('none-h');
+            $('#hcm').addClass('none-h');
+            $('#hn-h').addClass('none-h');
+            $('.li-first-h').css("background",'');
+        }
+
+        
+    });
+    $('.li-no2').click(function(){
+        if ($('#hcm-h').hasClass('none-h')) {
+            $('#k-h').addClass('none-h');
+            $('#hn-h').addClass('none-h');
+    $('.li-menu').css("background",'');
+            $('#hcm-h').removeClass('none-h');
+            $('.li-no2').css("background",'red');
+
+        }
+        else{
+            $('#k-h').addClass('none-h');
+            $('#hn-h').addClass('none-h');
+            $('.li-no2').css("background",'');
+            $('#hcm-h').addClass('none-h');
+        }
+
+    });
+
+    $('.li-no3').click(function(){
+        if ($('#k-h').hasClass('none-h')) {
+            $('#hcm-h').addClass('none-h');
+            $('#hn-h').addClass('none-h');
+                $('.li-menu').css("background",'');
+$('.li-no3').css("background",'red');
+            $('#k-h').removeClass('none-h');
+        }
+        else{
+            $('#hcm-h').addClass('none-h');
+            $('#hn-h').addClass('none-h');
+            $('.li-no3').css("background",'');
+            $('#k-h').addClass('none-h');
+        }
+
+    });
+    $('a ').click(function(){
+        // $('a').attr('title','Học Web Chuẩn');
+        var a=$(this).attr('href');
+        $(".map").each(function () {
+  var m=$(this).attr("id");
+ 
+  if (m==a) {
+$('.map').hide(300);
+$(this).show(300);
+  }
+});
+        return false;
+    });
+    
+};
