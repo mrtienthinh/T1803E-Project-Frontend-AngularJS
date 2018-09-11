@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Shale-pizzaasss</title>
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" media="all" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+    <link rel="stylesheet" type="text/css" href="css/font-pizzaro.css" media="all" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CYanone+Kaffeesatz:200,300,400,700" rel="stylesheet">
+    <link rel="shortcut icon" href="images/fav-icon.png">
+    <!-- css của các thành viên -->
+    <link rel="stylesheet" type="text/css" href="css/thinh.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="css/dat.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="css/hoan.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="css/an.css" media="all" />
+    <!-- Script -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+    <script src="js/angular-route.js"></script>
+    <script src="js/angular-animate.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+    <script src="js/ui-bootstrap-tpls-0.11.0.js"></script>
+    <script src='js/jquery.zoom.js'></script>
+    <!-- Script của các thành viên -->
+    <script type="text/javascript" src="js/thinh.js"></script>
+    <script type="text/javascript" src="js/hoan.js"></script>
+    <script type="text/javascript" src="js/dat.js"></script>
+    <script type="text/javascript" src="js/an.js"></script>
+</head>
+<body ng-app="shopApp" ng-controller="tryhard"> 
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-12 card-h" ng-repeat="p in products.slice(0,3) | filter:searchText">
+                <a href="#!/product/{{linkcategory}}/{{p.id}}">
+                <p class="text-center"><img  src={{p.imgUrl[0].pic}} class="img-fluid" ></p>
+                <p class="Bacon-h text-center">{{p.name}}</p>
+                <p class="Pick-h text-center"><del>----------</del> <span>Pick Size</span> <del>----------</del></p>
+                <ul class="ul-money-h">
+                    <li class="check-h">{{p.size[0].option}}<br>{{p.size[0].unit}}</li>
+                    <li class="amount-of-money">£{{p.pricesmall}}</li>
+                    <li class="check-h">{{p.size[1].option}}<br>{{p.size[1].unit}}</li>
+                    <li class="amount-of-money">£{{p.pricebig}}</li>
+                </ul>
+                <div class="clear-h"></div>
+                <div class=" Select-Options-h">
+                    <p class="Select-Options-P-h"><i class="far fa-check-circle"></i> Select Options</p>
+                </div>
+                </a>
+            </div>
+        </div>
+    </div>  
+</body>
+</html>

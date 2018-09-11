@@ -1,0 +1,65 @@
+.badge{
+	font-size: 100%;
+	border-radius: 100%;
+	line-height: 2;
+
+}
+.badge-pill{
+	padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.logo{
+	padding-top: 50px;
+	text-align: center;
+	margin: 0 auto;
+}
+.logo a{
+	text-align: center;
+	margin: 0 auto;
+}
+.info{
+	padding-top: 50px;
+	color: white;
+	text-align: center;
+	margin-left: 0px;
+}
+.find{
+	margin: 0 auto;
+	border-radius: 20px 20px 0px 0px;
+}
+.find a{
+	color: white;
+	text-decoration: none;
+}
+.find:hover a{
+	font-weight: 600;
+}
+/*franchise info*/
+.header-d{
+	background-color: #fff;
+	width: 800px;
+	height: 60px;
+	text-align: center;
+	margin: 0 auto;
+	padding-top: 18px;
+	font-weight: bold;
+}
+.footer-block-d{
+	background-color: rgb(44, 44, 44);;
+	margin-top: 50px;
+	padding-top: 50px;
+}
+.content-d{
+	width: 800px;
+	height: auto;
+	margin: 0 auto;
+}
+.franchiseinfo-d{
+	background-image: url(../images/franchiseinfo.jpg);
+	background-size: contain;
+	height: 1624px;
+}
