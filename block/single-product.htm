@@ -1,0 +1,149 @@
+<!-- Đây là block header -->
+<div ng-header-page></div>
+<!-- Đây là phần category  -->
+<div class="category-home-t">
+    <div class="container">
+        <ul class="row align-items-center">
+            <li ng-repeat="c in categorys" class="catagory-li-single-page-t col"><a class="catagory-link-single-page-t" href="#!/category/{{c.link}}"><i class={{c.icon}}></i>{{c.name}}</a></li>
+        </ul>
+    </div>
+</div>
+<!-- Đây là thanh điều hướng link trang -->
+<nav class="nav-single-link-t">
+    <div class="container">
+        <a href="#!/" class="Home-link-single-page-t">Home</a>
+        <i class="po po-arrow-right-slider"></i>
+        <a href="#!/category/{{linkcategory}}" class="category-nav-link-single-page-t">{{nameCategory}}</a>
+        <i class="po po-arrow-right-slider"></i>
+        <span>{{product.name}}</span>
+    </div>
+</nav>
+<!-- Đây là nội dung chính của single-page -->
+<div class="detail-single-product">
+    <div class="container">
+        <div class="row main-detail-product">
+            <div class="col">
+                <div class="row">
+                    <span id='img-zoom-t'>
+                        <img src={{imageInit}} class="img-fluid">
+                    </span>
+                </div>
+                <div class="row  mt-5 thumb-img-single-page-t">
+                    <div class="col">
+                        <img ng-click="getImage0()" src={{product.imgUrl[0].pic}} class="img-fluid">
+                    </div>
+                    <div class="col">
+                        <img ng-click="getImage1()" src={{product.imgUrl[1].pic}} class="img-fluid">
+                    </div>
+                    <div class="col">
+                        <img ng-click="getImage2()" src={{product.imgUrl[2].pic}} class="img-fluid">
+                    </div>
+                </div>
+            </div>
+            <div class="col right-info-single-page-t">
+                <h1 class="name-product">{{product.name}}<i class="po po-veggie-icon"></i></h1>
+                <p class="describe-product">{{product.description}}</p>
+                <p class="share-product-single-page-t">
+                    <a href="#"> <span class="btn badge-primary"><i class="fab fa-facebook-f"></i></span></a>
+                    <a href="#"> <span class="btn badge-success"><i class="fab fa-twitter"></i></span></a>
+                    <a href="#"> <span class="btn badge-warning"><i class="fab fa-instagram"></i></span></a>
+                    <a href="#"> <span class="btn badge-danger"><i class="far fa-share-square"></i></span></a>
+                </p> 
+                <div class="choose-item-single-page-t">
+                    <form class="cart" method="post" action="">
+                        <div class="row">
+                            <div class="col size-option-text-t">
+                                Select Size
+                            </div>
+                        </div>  
+                        <div  class="row size-option-div-t" >
+                            <div class="col size-option-col-t text-left form-group" ng-click="choicesmallproduct()">
+                                <label class="size-option-label-single-page-t" ng-show="showSizeOption" for="size-option-1-t">20<br>cm</label>
+                                <label class="size-option-label-single-page-t size-option-label-single-page-orange-t" ng-hide="showSizeOption" for="size-option-1-t">20<br>cm</label>
+                                <input type="radio" name="size-option-t" id="size-option-1-t" value="small-size-option" >
+                                <label for="size-option-1-t">£{{product.pricesmall}}</label>
+                            </div>
+                            <div class="col size-option-col-t form-group" ng-click="choicebigproduct()">
+                                <label class="size-option-label-single-page-t" ng-hide="showSizeOption" for="size-option-2-t">29<br>cm</label>
+                                <label class="size-option-label-single-page-t size-option-label-single-page-orange-t" ng-show="showSizeOption" for="size-option-2-t">29<br>cm</label>
+                                <input type="radio" name="size-option-t" id="size-option-2-t" value="big-size-option">
+                                <label for="size-option-2-t">£{{product.pricebig}}</label>
+                            </div>
+                        </div>
+                        <div class="">
+                            <label class="total-price-single-page-t">£{{priceofproduct*quantitySelectItem}}</label>
+                        </div>
+                        <div class="size-option-text-t">
+                            <label>Quantity</label>
+                        </div>
+                        <div class="">
+                            <div class="choose-quantity-single-page-t input-group">
+                                    <span id="minus-btn-t" ng-click="quantitySelectItem = quantitySelectItem - 1"><i class="fa fa-minus"></i></span>
+                                    <input ng-model="quantitySelectItem" type="number" id="qty_input-t" value="1" min="1" ng-valid inputmode="numeric" class="no-spinner">
+                                    <span id="plus-btn-t" ng-click="quantitySelectItem = quantitySelectItem + 1"><i class="fa fa-plus"></i></span>
+                                    <div class="cart_div-t">
+                                        <button type="submit" name="add-to-cart" value="50" class="single_add_to_cart_button-t">Add to cart</button>
+                                    </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Đây là phần review và rating -->
+    <div class="container choose-intfo-single-page-t" style="margin-top: 100px;">
+        <div class="row">
+            <div class="col"></div>
+            <div class="list-group choosetab-single-page-t col" id="list-tab" role="tablist">
+                <a ng-click="showTabRating1=true;showTabRating2=false;showTabRating3=false;showTabRating4=false;" class="list-group-item list-group-item-action text-center" id="list-home-list" data-toggle="list" role="tab" aria-controls="home">Description</a>
+                <a ng-click="showTabRating2=true;showTabRating1=false;showTabRating3=false;showTabRating4=false;" class="list-group-item list-group-item-action text-center" id="list-profile-list" data-toggle="list" role="tab" aria-controls="profile">Additional information</a>
+                <a ng-click="showTabRating3=true;showTabRating1=false;showTabRating2=false;showTabRating4=false;" class="list-group-item list-group-item-action text-center" id="list-messages-list" data-toggle="list" role="tab" aria-controls="messages">Nutritions</a>
+                <a ng-click="showTabRating4=true;showTabRating1=false;showTabRating2=false;showTabRating3=false;" class="list-group-item list-group-item-action text-center" id="list-settings-list" data-toggle="list" role="tab" aria-controls="settings">Reviews</a>
+            </div>
+            <div class="col"></div>
+        </div>
+    </div>
+    <div class="container-fluid show-choosetab-single-page-t">
+        <div class="container">
+            <div class="row">
+                <div class="tab-content col" id="nav-tabContent">
+                    <div ng-show="showTabRating1" id="list-home-t" role="tabpanel" aria-labelledby="list-home-list">{{product.description}}</div>
+                    <div ng-show="showTabRating2"  id="list-profile-t" role="tabpanel" aria-labelledby="list-profile-list">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia iusto dolore id sequi, soluta corrupti repellat cumque dicta, labore delectus eos maxime nisi neque fugit debitis veniam iste. Ea, error?</div>
+                    <div ng-show="showTabRating3" id="list-messages-t" role="tabpanel" aria-labelledby="list-messages-list">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque voluptate quis nulla quaerat iure dicta a, quas officia eius porro mollitia nemo quam, officiis eaque repellendus iste. Adipisci, officia quibusdam!</div>
+                    <div ng-show="showTabRating4" id="list-settings-t" role="tabpanel" aria-labelledby="list-settings-list">
+                        <form class="row">
+                            <div class="col-4 text-left">
+                                <div class="form-group">
+                                    <label for="rating-form-InputEmail1">Email address</label>
+                                    <input ng-model="review.email" ng-required="true" type="email" class="form-control" id="rating-form-InputEmail1" placeholder="Enter email">
+                                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                                </div>
+                                <div class="form-group form-check">
+                                    <input ng-model="review.reply" type="checkbox" class="form-check-input" id="rating-form-Check1">
+                                    <label class="form-check-label" for="rating-form-Check1">I need reply</label>
+                                </div>
+                                    <button ng-click="submitreviewproduct()" class="btn btn-primary w-100">Submit</button>
+                            </div>
+                            <div class="col-8 text-center form-group">
+                                <label for="rating-review-form-Input-t" class="d-block">Your review about {{product.name}}</label>
+                                <textarea ng-model="review.text" ng-required="true" class="form-control" id="rating-review-form-Input-t" cols="60" rows="8"></textarea>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- Đây là block footer -->
+<div class="row">
+        <div class="col d1-pagegalary"><img src=images/gallery02.jpg width=100% height="200px"></div>
+        <div class="col d1-pagegalary"><img src=images/gallery03.jpg width=100% height="200px"></div>
+        <div class="col d1-pagegalary"><img src=images/gallery04.jpg width=100% height="200px"></div>
+        <div class="col d1-pagegalary"><img src=images/gallery05.jpg width=100% height="200px"></div>
+        <div class="col d1-pagegalary"><img src=images/gallery06.jpg width=100% height="200px"></div>
+        <div class="col d1-pagegalary"><img src=images/gallery06.jpg width=100% height="200px"></div>
+    </div>
+</div>
+<div ng-footer-page></div>
