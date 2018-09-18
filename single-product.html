@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Shale-pizzaasss</title>
+        <!-- css -->
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" media="all" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+        <link rel="stylesheet" href="css/nga.min.css">
+        <link rel="stylesheet" type="text/css" href="css/font-pizzaro.css" media="all" />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CYanone+Kaffeesatz:200,300,400,700" rel="stylesheet">
+        <link rel="shortcut icon" href="images/fav-icon.png">
+        <!-- css của các thành viên -->
+        <link rel="stylesheet" type="text/css" href="css/thinh.css" media="all" />
+        <link rel="stylesheet" type="text/css" href="css/hoan.css" media="all" />
+        <link rel="stylesheet" type="text/css" href="css/dat.css" media="all" />
+        <!-- Script -->
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+        <script src="js/angular-route.js"></script>
+        <script src="js/angular-animate.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+        <script src="js/ui-bootstrap-tpls-0.11.0.js"></script>
+        <script src='js/jquery.zoom.js'></script>
+        <!-- Script của các thành viên -->
+        <script type="text/javascript" src="js/thinh.js"></script>
+        <script type="text/javascript" src="js/hoan.js"></script>
+
+   </head>
+   <body ng-app="shopApp" ng-controller="productController">   
+        <!-- Đây là header -->
+             <!--Đây là phần header khi  thu nhỏ  -->
+        <header class="container-fluid  d-xl-none ">
+            <div class="test-h  test1-h">
+                <h3 class="close-h" onclick="closeheader()"><span class="test-h-span-h">x</span>     Close</h3>
+                <ul>
+                    <li  > <i class="po po-pizza icon-i-h"></i>Pizza</li>
+                    <li  > <i class="po po-burger icon-i-h"></i>Sandwiches</li>
+                    <li  > <i class="po po-salads icon-i-h"></i>Garlic Breads</li>
+                    <li  > <i class="po po-tacos icon-i-h"></i>Desserts</li>
+                     <li  class=" li-last-h " ><i class="po po-drinks icon-i-h"></i> Beverages</li>
+                   
+                    
+                     <li  ><i class="po po-wraps icon-i-h"></i>combo</li>
+                     <li  ><i class="po po-best-quality icon-i-h"></i>Weekend</li>
+                     <li  ><i class="po po-master-chef icon-i-h"></i>Gallery</li>
+                     <li  ><i class="po po-load-more-icon icon-i-h"></i>Franchise</li>
+                     <li  ><i class="po po-store-locator-menu icon-i-h"></i>Location</li>
+                   
+                </ul>
+
+            </div>
+            <div class="row header-single-page-t">
+                <nav class="container">
+                    <!-- Thanh menu trên header -->
+                    <ul class="nav row align-items-center nav-single-page-t">
+                        <li class="nav-item col">
+                            <a class="nav-link" href="#"><img src="images/Logo3.png" alt="Logo" class="img-fluid"></a>
+                        </li>
+                        <li class="nav-item col d-lg-none d-xl-block  d-md-none d-sm-none d-none ">
+                            <a href="#">Order online</a>
+                        </li>
+                    </li>
+                    <li class="nav-item col dropdown-header-category-t  d-lg-none d-xl-block  d-md-none d-sm-none d-none">
+                        <a href="#">Catagory<i class="fas fa-caret-down"></i></a>
+                        <div class="dropdown-header-category-div-t">
+                            <ul class="nav flex-column">
+                                <a href="#!/category/pizzas"><li class="nav-item">Pizza</li></a>
+                                <a href="#!/category/garlic_breads"><li class="nav-item">Garlic Breads</li></a>
+                                <a href="#!/category/pizza_sandwiches"><li class="nav-item">Pizza Sandwiches</li></a>
+                                <a href="#!/category/desserts"><li class="nav-item">Desserts</li></a>
+                                <a href="#!/category/beverages"><li class="nav-item">Beverages</li></a>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item col dropdown-header-pages-t d-lg-none d-xl-block  d-md-none d-sm-none d-none">
+                        <a href="#">Pages<i class="fas fa-caret-down"></i></a>
+                        <div class="dropdown-header-pages-div-t">
+                            <ul class="nav flex-column">
+                                <a href="#!/location"><li class="nav-item">Location</li></a>
+                                <a href="#!/combo"><li class="nav-item">Combo</li></a>
+                                <a href="#!/weekendspecial"><li class="nav-item">Weekend Special</li></a>
+                                <a href="#!/franchise"><li class="nav-item">Franchise Info</li></a>
+                                <a href="#!/galary"><li class="nav-item">Gallery</li></a>
+                                <a href="#!/storelocation"><li class="nav-item">Store Location</li></a>
+                                <a href="#!/contact"><li class="nav-item">Contact Us</li></a>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item col d-lg-none d-xl-block  d-md-none d-sm-none d-none">
+                        <a href="#!/storelocation">Store Location</a>
+                    </li>
+                    <li class="nav-item col dropdown-header-cart-t d-lg-none d-xl-block  d-md-none d-sm-none d-none">
+                        <a href="#" class="cart-link-home-t d-inline">
+                            <i class="po po-scooter"><span class="count-item-t">0</span></i>
+                            <span class="amount-money-home-t d-inline">$50.00</span>
+                            <div class="dropdown-header-cart-div-t">
+                                No product in cart
+                            </div>
+                        </a>
+                    </li>
+                    <li class="icon-responsive-h" onclick="closeheader()"><i class="fas fa-align-justify"></i> </li>
+                </ul>
+            </nav>
+        </header>
+        <!-- Đây là header -->
+        <header class="container-fluid  d-lg-none d-xl-block  d-md-none d-sm-none d-none">
+            <div class="row header-single-page-t">
+                <nav class="container">
+                    <!-- Thanh menu trên header -->
+                    <ul class="nav row align-items-center nav-single-page-t">
+                        <li class="nav-item col">
+                            <a class="nav-link" href="home-page.html"><img src="images/Logo3.png" alt="Logo" class="img-fluid"></a>
+                        </li>
+                        <li class="nav-item col">
+                            <a href="home-page.html">Order online</a>
+                        </li>
+                                    </li>
+                        <li class="nav-item col dropdown-header-category-t ">
+                            <a href="#">Catagory<i class="fas fa-caret-down"></i></a>
+                            <div class="dropdown-header-category-div-t">
+                                <ul class="nav flex-column">
+                                    <a href="list-product.html#!/pizzas" ng-click="changecategorylistpage()"><li class="nav-item">Pizza</li></a>
+                                    <a href="list-product.html#!/garlic_breads" ng-click="changecategorylistpage()"><li class="nav-item">Garlic Breads</li></a>
+                                    <a href="list-product.html#!/pizza_sandwiches" ng-click="changecategorylistpage()"><li class="nav-item">Pizza Sandwiches</li></a>
+                                    <a href="list-product.html#!/desserts" ng-click="changecategorylistpage()"><li class="nav-item">Desserts</li></a>
+                                    <a href="list-product.html#!/beverages" ng-click="changecategorylistpage()"><li class="nav-item">Beverages</li></a>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item col dropdown-header-pages-t">
+                            <a href="#">Pages<i class="fas fa-caret-down"></i></a>
+                            <div class="dropdown-header-pages-div-t">
+                                <ul class="nav flex-column">
+                                    <a href="store-location.html"><li class="nav-item">Location</li></a>
+                                    <a href="combo-offers-page.html"><li class="nav-item">Combo</li></a>
+                                    <a href="weekendspecial.html"><li class="nav-item">Weekend Special</li></a>
+                                    <a href="franchise.html"><li class="nav-item">Franchise Info</li></a>
+                                    <a href="galary.html"><li class="nav-item">Gallery</li></a>
+                                    <a href="store-location.html"><li class="nav-item">Store Location</li></a>
+                                    <a href="contactus.html"><li class="nav-item">Contact Us</li></a>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item col">
+                            <a href="store-location.html">Store Location</a>
+                        </li>
+                        <li class="nav-item col dropdown-header-cart-t">
+                            <a href="#" class="cart-link-home-t d-inline">
+                                <i class="po po-scooter"><span class="count-item-t">0</span></i>
+                                <span class="amount-money-home-t d-inline">$50.00</span>
+                                <div class="dropdown-header-cart-div-t">
+                                    No product in cart
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!-- Header nav trang chủ và trang single page -->
+        <div class="category-home-t d-lg-none d-xl-block  d-md-none d-sm-none d-none">
+            <div class="container">
+                <ul class="row align-items-center">
+                    <li class="catagory-li-single-page-t col"><a class="catagory-link-single-page-t" href="combo-offers-page.html"><i class="po po-fries icon-i-h"></i>Combo</a></li>
+                    <li class="catagory-li-single-page-t col"><a class="catagory-link-single-page-t" href="weekendspecial.html"><i class="po po-best-quality icon-i-h"></i>Weekend</a></li>
+                    <li class="catagory-li-single-page-t col"><a class="catagory-link-single-page-t" href="galary.html"><i class="po po-master-chef icon-i-h"></i>Gallery</a></li>
+                    <li class="catagory-li-single-page-t col"><a class="catagory-link-single-page-t" href="franchise.html"><i class="po po-load-more-icon icon-i-h"></i>Franchise</a></li>
+                    <li class="catagory-li-single-page-t col"><a class="catagory-link-single-page-t" href="store-location.html"><i class="po po-store-locator-menu icon-i-h"></i>Location</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Đây là nội dung chính của single-page -->
+        <div class="detail-single-product">
+            <div class="container">
+                <div class="row main-detail-product">
+                    <div class="col-xl-5 col-lg-12 col-md-12 col-sm-12 ">
+                        <div class="row">
+                            <span id='img-zoom-t'>
+                                <img src={{imageInit}} class="img-fluid">
+                            </span>
+                        </div>
+                        <div class="row  mt-5 thumb-img-single-page-t">
+                            <div class="col">
+                                <img ng-click="getImage0()" src={{product.imgUrl[0].pic}} class="img-fluid">
+                            </div>
+                            <div class="col">
+                                <img ng-click="getImage1()" src={{product.imgUrl[1].pic}} class="img-fluid">
+                            </div>
+                            <div class="col">
+                                <img ng-click="getImage2()" src={{product.imgUrl[2].pic}} class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col right-info-single-page-t">
+                        <h1 class="name-product">{{product.name}}<i class="po po-veggie-icon"></i></h1>
+                        <p class="describe-product">{{product.description}}</p>
+                        <p class="share-product-single-page-t">
+                            <a href="#"> <span class="btn badge-primary"><i class="fab fa-facebook-f"></i></span></a>
+                            <a href="#"> <span class="btn badge-success"><i class="fab fa-twitter"></i></span></a>
+                            <a href="#"> <span class="btn badge-warning"><i class="fab fa-instagram"></i></span></a>
+                            <a href="#"> <span class="btn badge-danger"><i class="far fa-share-square"></i></span></a>
+                        </p> 
+                        <div class="choose-item-single-page-t">
+                            <form class="cart" method="post" action="">
+                                <div class="row">
+                                    <div class="col-xl-5 col-lg-12 col-md-12 col-sm-12 size-option-text-t">
+                                        Select Size
+                                    </div>
+                                </div>  
+                                <div  class="row size-option-div-t" >
+                                    <div class="col size-option-col-t text-left form-group" ng-click="choicesmallproduct()">
+                                        <label class="size-option-label-single-page-t" ng-show="showSizeOption" for="size-option-1-t">20<br>cm</label>
+                                        <label class="size-option-label-single-page-t size-option-label-single-page-orange-t" ng-hide="showSizeOption" for="size-option-1-t">20<br>cm</label>
+                                        <input type="radio" name="size-option-t" id="size-option-1-t" value="small-size-option" >
+                                        <label for="size-option-1-t">£{{product.pricesmall}}</label>
+                                    </div>
+                                    <div class="col size-option-col-t form-group" ng-click="choicebigproduct()">
+                                        <label class="size-option-label-single-page-t" ng-hide="showSizeOption" for="size-option-2-t">29<br>cm</label>
+                                        <label class="size-option-label-single-page-t size-option-label-single-page-orange-t" ng-show="showSizeOption" for="size-option-2-t">29<br>cm</label>
+                                        <input type="radio" name="size-option-t" id="size-option-2-t" value="big-size-option">
+                                        <label for="size-option-2-t">£{{product.pricebig}}</label>
+                                    </div>
+                                </div>
+                                <div class="">
+                                    <label class="total-price-single-page-t">£{{priceofproduct*quantitySelectItem}}</label>
+                                </div>
+                                <div class="size-option-text-t">
+                                    <label>Quantity</label>
+                                </div>
+                                <div class="">
+                                    <div class="choose-quantity-single-page-t input-group">
+                                        <div class="input-btn-h">
+                                            <span id="minus-btn-t" ng-click="quantitySelectItem = quantitySelectItem - 1"><i class="fa fa-minus"></i></span>
+                                            <input ng-model="quantitySelectItem" type="number" id="qty_input-t" value="1" min="1" ng-valid inputmode="numeric" class="no-spinner">
+                                            <span id="plus-btn-t" ng-click="quantitySelectItem = quantitySelectItem + 1"><i class="fa fa-plus"></i></span>
+                                            </div>
+
+                                            <div class="cart_div-t">
+                                                <button type="submit" name="add-to-cart" value="50" class="single_add_to_cart_button-t">Add to cart</button>
+                                            </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Đây là phần review và rating -->
+        <div class="container choose-intfo-single-page-t container-fluid-h" style="margin-top: 100px;">
+            <div class="row ">
+                <div class="col  d-lg-none d-xl-block  d-md-none d-sm-none d-none"></div>
+                <div class="list-group choosetab-single-page-t col " id="list-tab" role="tablist">
+                    <a ng-click="showTabRating1=true;showTabRating2=false;showTabRating3=false;showTabRating4=false;" class="list-group-item list-group-item-action text-center" id="list-home-list" data-toggle="list" role="tab" aria-controls="home">Description</a>
+                    <a ng-click="showTabRating2=true;showTabRating1=false;showTabRating3=false;showTabRating4=false;" class="list-group-item list-group-item-action text-center" id="list-profile-list" data-toggle="list" role="tab" aria-controls="profile">Additional information</a>
+                    <a ng-click="showTabRating3=true;showTabRating1=false;showTabRating2=false;showTabRating4=false;" class="list-group-item list-group-item-action text-center" id="list-messages-list" data-toggle="list" role="tab" aria-controls="messages">Nutritions</a>
+                    <a ng-click="showTabRating4=true;showTabRating1=false;showTabRating2=false;showTabRating3=false;" class="list-group-item list-group-item-action text-center" id="list-settings-list" data-toggle="list" role="tab" aria-controls="settings">Reviews</a>
+                </div>
+                <div class="col d-lg-none d-xl-block  d-md-none d-sm-none d-none"></div>
+            </div>
+        </div>
+        <div class="container-fluid show-choosetab-single-page-t">
+            <div class="container">
+                <div class="row">
+                    <div class="tab-content col" id="nav-tabContent">
+                        <div ng-show="showTabRating1" id="list-home-t" role="tabpanel" aria-labelledby="list-home-list">{{product.description}}</div>
+                        <div ng-show="showTabRating2"  id="list-profile-t" role="tabpanel" aria-labelledby="list-profile-list">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia iusto dolore id sequi, soluta corrupti repellat cumque dicta, labore delectus eos maxime nisi neque fugit debitis veniam iste. Ea, error?</div>
+                        <div ng-show="showTabRating3" id="list-messages-t" role="tabpanel" aria-labelledby="list-messages-list">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque voluptate quis nulla quaerat iure dicta a, quas officia eius porro mollitia nemo quam, officiis eaque repellendus iste. Adipisci, officia quibusdam!</div>
+                        <div ng-show="showTabRating4" id="list-settings-t" role="tabpanel" aria-labelledby="list-settings-list">
+                            <form class="row">
+                                <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 text-left">
+                                    <div class="form-group">
+                                        <label for="rating-form-InputEmail1">Email address</label>
+                                        <input ng-model="review.email" ng-required="true" type="email" class="form-control" id="rating-form-InputEmail1" placeholder="Enter email">
+                                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                                    </div>
+                                    <div class="form-group form-check">
+                                        <input ng-model="review.reply" type="checkbox" class="form-check-input" id="rating-form-Check1">
+                                        <label class="form-check-label" for="rating-form-Check1">I need reply</label>
+                                    </div>
+                                        <button ng-click="submitreviewproduct()" class="btn btn-primary w-100">Submit</button>
+                                </div>
+                                <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 text-center form-group">
+                                    <label for="rating-review-form-Input-t" class="d-block">Your review about {{product.name}}</label>
+                                    <textarea ng-model="review.text" ng-required="true" class="form-control" id="rating-review-form-Input-t" cols="60" rows="8"></textarea>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Đây là block footer -->
+        <footer class="container-fluid footer-block-d">
+            <div class="container">
+                <div class="row">
+                    <div class="  margin-auto-h">
+                        <span class="badge badge-pill badge-primary"><i class="fab fa-facebook-f icon-d"></i></span>	
+                        <span class="badge badge-pill badge-success"><i class="fab fa-twitter icon-d"></i></span>
+                        <span class="badge badge-pill badge-warning"><i class="fab fa-instagram icon-d"></i></span>
+                        <span class="badge badge-pill badge-danger"><i class="fab fa-youtube icon-d"></i></span>
+                        <span class="badge badge-pill badge-info">Z</span>
+                    </div>
+                </div>
+                <div class="row logo">
+        
+                        <a href="#"><img src="images/Logo4.png"></a>
+        
+                    </div>
+                <div class="row">
+                    <div class=" info col-md-12 offset-md-3 d">
+                    <p> Nhà Hàng Pizza   |    Số 8 Tôn Thất Thuyết, Mỹ Đình 2, Nam Từ Liêm, Hà Nội   |    Tel: 0981356222   |   Fax: 0981356222</p>
+                    <p> Copyright © 2017 Pizzaro Theme. All rights reserved.</p>
+                    </div>
+                    <div class=" find p-3 bg-danger text-white"> <a href="https://www.google.com/maps"> <i class="fas fa-map-marker-alt"></i> Find Us On Map </a></div>
+                </div>
+            </div>
+        </footer>      
+        <!-- Đây là nút scrollup -->
+        <button class="scrollup-t"><i class="fas fa-arrow-alt-circle-up"></i></button>
+   </body>
+</html>

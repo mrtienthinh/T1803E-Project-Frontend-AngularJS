@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en-US">
+   <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Shale-pizzaasss</title>
+        <!-- css -->
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" media="all" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+        <link rel="stylesheet" type="text/css" href="css/font-pizzaro.css" media="all" />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CYanone+Kaffeesatz:200,300,400,700" rel="stylesheet">
+        <link rel="shortcut icon" href="images/fav-icon.png">
+        <!-- css của các thành viên -->
+        <link rel="stylesheet" type="text/css" href="css/thinh.css" media="all" />
+        <link rel="stylesheet" type="text/css" href="css/hoan.css" media="all" />
+        <link rel="stylesheet" type="text/css" href="css/dat.css" media="all" />
+        <!-- Script -->
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+        <script src="js/angular-route.js"></script>
+        <script src="js/angular-animate.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+        <script src="js/ui-bootstrap-tpls-0.11.0.js"></script>
+        <script src='js/jquery.zoom.js'></script>
+        <!-- Script của các thành viên -->
+        <script type="text/javascript" src="js/thinh.js"></script>
+        <script type="text/javascript" src="js/hoan.js"></script>
+
+   </head>
+   <body ng-app="shopApp" ng-controller="storelocationController">   
+        <!--Đây là phần header khi  thu nhỏ  -->
+        <header class="container-fluid  d-xl-none ">
+            <div class="test-h  test1-h">
+                <h3 class="close-h" onclick="closeheader()"><span class="test-h-span-h">x</span>     Close</h3>
+                <ul>
+                    <li  > <i class="po po-pizza icon-i-h"></i>Pizza</li>
+                    <li  > <i class="po po-burger icon-i-h"></i>Sandwiches</li>
+                    <li  > <i class="po po-salads icon-i-h"></i>Garlic Breads</li>
+                    <li  > <i class="po po-tacos icon-i-h"></i>Desserts</li>
+                     <li  class=" li-last-h " ><i class="po po-drinks icon-i-h"></i> Beverages</li>
+                   
+                    
+                     <li  ><i class="po po-wraps icon-i-h"></i>combo</li>
+                     <li  ><i class="po po-best-quality icon-i-h"></i>Weekend</li>
+                     <li  ><i class="po po-master-chef icon-i-h"></i>Gallery</li>
+                     <li  ><i class="po po-load-more-icon icon-i-h"></i>Franchise</li>
+                     <li  ><i class="po po-store-locator-menu icon-i-h"></i>Location</li>
+                   
+                </ul>
+
+            </div>
+            <div class="row header-single-page-t">
+                <nav class="container">
+                    <!-- Thanh menu trên header -->
+                    <ul class="nav row align-items-center nav-single-page-t">
+                        <li class="nav-item col">
+                            <a class="nav-link" href="#"><img src="images/Logo3.png" alt="Logo" class="img-fluid"></a>
+                        </li>
+                        <li class="nav-item col d-lg-none d-xl-block  d-md-none d-sm-none d-none ">
+                            <a href="#">Order online</a>
+                        </li>
+                    </li>
+                    <li class="nav-item col dropdown-header-category-t  d-lg-none d-xl-block  d-md-none d-sm-none d-none">
+                        <a href="#">Catagory<i class="fas fa-caret-down"></i></a>
+                        <div class="dropdown-header-category-div-t">
+                            <ul class="nav flex-column">
+                                <a href="#!/category/pizzas"><li class="nav-item">Pizza</li></a>
+                                <a href="#!/category/garlic_breads"><li class="nav-item">Garlic Breads</li></a>
+                                <a href="#!/category/pizza_sandwiches"><li class="nav-item">Pizza Sandwiches</li></a>
+                                <a href="#!/category/desserts"><li class="nav-item">Desserts</li></a>
+                                <a href="#!/category/beverages"><li class="nav-item">Beverages</li></a>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item col dropdown-header-pages-t d-lg-none d-xl-block  d-md-none d-sm-none d-none">
+                        <a href="#">Pages<i class="fas fa-caret-down"></i></a>
+                        <div class="dropdown-header-pages-div-t">
+                            <ul class="nav flex-column">
+                                <a href="#!/location"><li class="nav-item">Location</li></a>
+                                <a href="#!/combo"><li class="nav-item">Combo</li></a>
+                                <a href="#!/weekendspecial"><li class="nav-item">Weekend Special</li></a>
+                                <a href="#!/franchise"><li class="nav-item">Franchise Info</li></a>
+                                <a href="#!/galary"><li class="nav-item">Gallery</li></a>
+                                <a href="#!/storelocation"><li class="nav-item">Store Location</li></a>
+                                <a href="#!/contact"><li class="nav-item">Contact Us</li></a>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item col d-lg-none d-xl-block  d-md-none d-sm-none d-none">
+                        <a href="#!/storelocation">Store Location</a>
+                    </li>
+                    <li class="nav-item col dropdown-header-cart-t d-lg-none d-xl-block  d-md-none d-sm-none d-none">
+                        <a href="#" class="cart-link-home-t d-inline">
+                            <i class="po po-scooter"><span class="count-item-t">0</span></i>
+                            <span class="amount-money-home-t d-inline">$50.00</span>
+                            <div class="dropdown-header-cart-div-t">
+                                No product in cart
+                            </div>
+                        </a>
+                    </li>
+                    <li class="icon-responsive-h" onclick="closeheader()"><i class="fas fa-align-justify"></i> </li>
+                </ul>
+            </nav>
+        </header>
+        <!-- Đây là header -->
+        <header class="container-fluid  d-lg-none d-xl-block  d-md-none d-sm-none d-none">
+            <div class="row header-single-page-t">
+                <nav class="container">
+                    <!-- Thanh menu trên header -->
+                    <ul class="nav row align-items-center nav-single-page-t">
+                        <li class="nav-item col">
+                            <a class="nav-link" href="home-page.html"><img src="images/Logo3.png" alt="Logo" class="img-fluid"></a>
+                        </li>
+                        <li class="nav-item col">
+                            <a href="home-page.html">Order online</a>
+                        </li>
+                                    </li>
+                        <li class="nav-item col dropdown-header-category-t ">
+                            <a href="#">Catagory<i class="fas fa-caret-down"></i></a>
+                            <div class="dropdown-header-category-div-t">
+                                <ul class="nav flex-column">
+                                    <a href="list-product.html#!/pizzas" ng-click="changecategorylistpage()"><li class="nav-item">Pizza</li></a>
+                                    <a href="list-product.html#!/garlic_breads" ng-click="changecategorylistpage()"><li class="nav-item">Garlic Breads</li></a>
+                                    <a href="list-product.html#!/pizza_sandwiches" ng-click="changecategorylistpage()"><li class="nav-item">Pizza Sandwiches</li></a>
+                                    <a href="list-product.html#!/desserts" ng-click="changecategorylistpage()"><li class="nav-item">Desserts</li></a>
+                                    <a href="list-product.html#!/beverages" ng-click="changecategorylistpage()"><li class="nav-item">Beverages</li></a>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item col dropdown-header-pages-t">
+                            <a href="#">Pages<i class="fas fa-caret-down"></i></a>
+                            <div class="dropdown-header-pages-div-t">
+                                <ul class="nav flex-column">
+                                    <a href="store-location.html"><li class="nav-item">Location</li></a>
+                                    <a href="combo-offers-page.html"><li class="nav-item">Combo</li></a>
+                                    <a href="weekendspecial.html"><li class="nav-item">Weekend Special</li></a>
+                                    <a href="franchise.html"><li class="nav-item">Franchise Info</li></a>
+                                    <a href="galary.html"><li class="nav-item">Gallery</li></a>
+                                    <a href="store-location.html"><li class="nav-item">Store Location</li></a>
+                                    <a href="contactus.html"><li class="nav-item">Contact Us</li></a>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item col">
+                            <a href="store-location.html">Store Location</a>
+                        </li>
+                        <li class="nav-item col dropdown-header-cart-t">
+                            <a href="#" class="cart-link-home-t d-inline">
+                                <i class="po po-scooter"><span class="count-item-t">0</span></i>
+                                <span class="amount-money-home-t d-inline">$50.00</span>
+                                <div class="dropdown-header-cart-div-t">
+                                    No product in cart
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!-- Header nav trang chủ và trang single page -->
+        <div class="category-home-t d-lg-none d-xl-block  d-md-none d-sm-none d-none">
+            <div class="container">
+                <ul class="row align-items-center">
+                    <li class="catagory-li-single-page-t col"><a class="catagory-link-single-page-t" href="combo-offers-page.html"><i class="po po-fries icon-i-h"></i>Combo</a></li>
+                    <li class="catagory-li-single-page-t col"><a class="catagory-link-single-page-t" href="weekendspecial.html"><i class="po po-best-quality icon-i-h"></i>Weekend</a></li>
+                    <li class="catagory-li-single-page-t col"><a class="catagory-link-single-page-t" href="galary.html"><i class="po po-master-chef icon-i-h"></i>Gallery</a></li>
+                    <li class="catagory-li-single-page-t col"><a class="catagory-link-single-page-t" href="franchise.html"><i class="po po-load-more-icon icon-i-h"></i>Franchise</a></li>
+                    <li class="catagory-li-single-page-t col"><a class="catagory-link-single-page-t" href="store-location.html"><i class="po po-store-locator-menu icon-i-h"></i>Location</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Đây là nội dung của store-location -->
+        <div class="container-fluid store-location-page-h">
+            <div class="container">
+                <div class="row ">
+                    <div class="col-lg-4 col-md-12 col-sm-12 center-left-h">
+                        <h3 class="store-h  text-center">STORE LOCATION</h3>
+                        <ul>
+                            <li class=" li-first-h li-menu text-center"></i>Hà Nội</li>
+                            <div class="menu-detail-h none-h " id="hn-h">
+        
+                                <h3 class="detail-h3 text-center">Danh sách cửa hàng</h3>
+                                <p class="address-h "><a href="map1" class="a-h">- Số 333 Cầu Giấy , Cầu Giấy, Quận Cầu
+                                        Giấy , Hà Nội, Việt Nam</a><br></p>
+                                <p class="address-h "><a href="map2" class="a-h">- Số 30 Đoàn Trần Nghiệp , P. Bùi Thị
+                                        Xuân, Quận Hai Bà Trưng , Hà Nội, Việt Nam</a><br></p>
+                                <p class="address-h "><a href="map3" class="a-h">- TTTM Royal City: Tầng hầm B2,
+                                        R3-14 Số 72 Nguyễn Trãi , P. Thượng Đình, Quận Thanh Xuân , Hà Nội, Việt Nam</a><br></p>
+                            </div>
+        
+                            <li class=" li-no2 li-menu text-center"> </i>TP.Hồ Chí Minh</li>
+                            <div class="menu-detail-h none-h" id="hcm-h">
+        
+                                <h3 class="detail-h3 text-center">Danh sách cửa hàng</h3>
+                                <p class="address-h"><a href="map4" class="a-h">- Số 105-107 Nguyễn Thái Học , P. Cầu
+                                        Ông Lãnh, Quận 1 , TP. Hồ Chí Minh, Việt Nam</a><br></p>
+                                <p class="address-h"><a href="map5" class="a-h">- Số 333 Lê Văn Sỹ , Phường 13, Quận 3
+                                        , TP. Hồ Chí Minh, Việt Nam</a><br></p>
+                                <p class="address-h"><a href="map6" class="a-h">- Số 638 Quang Trung , Phường 11, Quận
+                                        Gò Vấp , TP. Hồ Chí Minh, Việt Nam</a><br></p>
+        
+                            </div>
+        
+                            <li class="  li-no3 li-menu text-center"> </i>Thành Phố Khác</li>
+                            <div class="menu-detail-h none-h" id="k-h">
+        
+                                <h3 class="detail-h3 text-center">Danh sách cửa hàng</h3>
+                                <p class="address-h"><a href="map7" class="a-h">- Số 17 Quang Trung , P. Quang Trung,
+                                        Huyện Vinh , Nghệ An, Việt Nam</a><br></p>
+                                <p class="address-h"><a href="map8" class="a-h">- Tầng 5, TTTM Vincom Plaza , Tiên
+                                        Cát, Tp. Việt Trì , Phú Thọ, Việt Nam</a><br></p>
+                                <p class="address-h"><a href="map9" class="a-h">- Tầng trệt, Siêu thị Co.op Mart 478
+                                        Điện Biên Phủ , Phường Thanh Khê, Quận Thanh Khê , Đà Nẵng, Việt Nam</a><br></p>
+                            </div>
+        
+        
+                        </ul>
+        
+                    </div>
+                    <div class="  col-lg-8 col-md-12 col-sm-12 ">
+                        <div class="row content-burger1 map" id="map1">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.934891870677!2d105.79019661450484!3d21.035290985994834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab481629a287%3A0x2a7b6190e47f9cea!2zMzMzIMSQxrDhu51uZyBD4bqndSBHaeG6pXksIEThu4tjaCBW4buNbmcsIEPhuqd1IEdp4bqleSwgSMOgIE7hu5lpIDA0MywgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1536155822746"
+                                width="100%" height="600px" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        </div>
+                        <div class="row content-burger2 map" style="display: none;" id="map2">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.517615289728!2d105.84713941450433!3d21.01196518600745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab8b9f6f339b%3A0x4e1db41f4ab5d774!2zMzAgxJBvw6BuIFRy4bqnbiBOZ2hp4buHcCwgQsO5aSBUaOG7iyBYdcOibiwgSGFpIELDoCBUcsawbmcsIEjDoCBO4buZaSwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1536485787492"
+                                width="100%" height="600px" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        </div>
+                        <div class="row content-burger3 map" style="display: none;" id="map3">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.7683523673477!2d105.8134184645042!3d21.001920836012907!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ac9b13bbc56f%3A0xc657c245c5ff794c!2sThe+Pizza+Company+Royal+City!5e0!3m2!1svi!2s!4v1536164438488"
+                                width="100%" height="600px" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        </div>
+                        <div class="row content-burger3 map" style="display: none;" id="map4">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.5839455698137!2d106.6941175143504!3d10.766513392328273!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f158b4720cf%3A0xb001e0f6e2726234!2zVGhlIFBpenphIENvbXBhbnkgTmd1eeG7hW4gVGjDoWkgSOG7jWM!5e0!3m2!1svi!2s!4v1536332522785"
+                                width="100%" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        </div>
+                        <div class="row content-burger3 map" style="display: none;" id="map5">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.3040775370096!2d106.67522751435051!3d10.788006592313664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f2a8be7876f%3A0xfb125e2cb9e390c6!2zMzMzIMSQxrDhu51uZyBMw6ogVsSDbiBT4bu5LCBQaMaw4budbmcgMTMsIFF14bqtbiAzLCBI4buTIENow60gTWluaCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1536332824060"
+                                width="100%" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        </div>
+                        <div class="row content-burger3 map" style="display: none;" id="map6">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.6767921306005!2d106.65821441435111!3d10.836027592281114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317529a76a352a03%3A0xc8cc8ef5dddb9ab6!2zNjM4IFF1YW5nIFRydW5nLCBQaMaw4budbmcgMTEsIEfDsiBW4bqlcCwgSOG7kyBDaMOtIE1pbmgsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1536332960450"
+                                width="100%" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        </div>
+                        <div class="row content-burger3 map" style="display: none;" id="map7">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3779.8861798663097!2d105.67174381446063!3d18.66910288732263!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3139ce6485e79e1b%3A0x2d8ab37f3502f3a8!2sThe+Pizza+Company+Quang+Trung+-+Vinh!5e0!3m2!1svi!2s!4v1536333019603"
+                                width="100%" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        </div>
+                        <div class="row content-burger3 map" style="display: none;" id="map8">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3716.963587397358!2d105.39356116451032!3d21.312455085845304!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31348d4f4313b487%3A0x97d00a9f8ade9da9!2sThe+Pizza+Company+Vincom+Vi%E1%BB%87t+Tr%C3%AC!5e0!3m2!1svi!2s!4v1536333324239"
+                                width="100%" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        </div>
+                        <div class="row content-burger3 map" style="display: none;" id="map9">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3833.9786244265106!2d108.18469041441796!3d16.066598988882625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31421901d6d4746b%3A0xf0afc53dc199668b!2zQ28ub3BtYXJ0IMSQw6AgTuG6tW5n!5e0!3m2!1svi!2s!4v1536333407823"
+                                width="100%" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Đây là block footer -->
+        <footer class="container-fluid footer-block-d">
+            <div class="container">
+                <div class="row">
+                    <div class="  margin-auto-h">
+                        <span class="badge badge-pill badge-primary"><i class="fab fa-facebook-f icon-d"></i></span>	
+                        <span class="badge badge-pill badge-success"><i class="fab fa-twitter icon-d"></i></span>
+                        <span class="badge badge-pill badge-warning"><i class="fab fa-instagram icon-d"></i></span>
+                        <span class="badge badge-pill badge-danger"><i class="fab fa-youtube icon-d"></i></span>
+                        <span class="badge badge-pill badge-info">Z</span>
+                    </div>
+                </div>
+                <div class="row logo">
+        
+                        <a href="#"><img src="images/Logo4.png"></a>
+        
+                    </div>
+                <div class="row">
+                    <div class=" info col-md-12 offset-md-3 d">
+                    <p> Nhà Hàng Pizza   |    Số 8 Tôn Thất Thuyết, Mỹ Đình 2, Nam Từ Liêm, Hà Nội   |    Tel: 0981356222   |   Fax: 0981356222</p>
+                    <p> Copyright © 2017 Pizzaro Theme. All rights reserved.</p>
+                    </div>
+                    <div class=" find p-3 bg-danger text-white"> <a href="https://www.google.com/maps"> <i class="fas fa-map-marker-alt"></i> Find Us On Map </a></div>
+                </div>
+            </div>
+        </footer>      
+        <!-- Đây là nút scrollup -->
+        <button class="scrollup-t"><i class="fas fa-arrow-alt-circle-up"></i></button>
+   </body>
+</html>
