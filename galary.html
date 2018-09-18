@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en-US">
+   <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Gallery</title>
+        <!-- css -->
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" media="all" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+        <link rel="stylesheet" type="text/css" href="css/font-pizzaro.css" media="all" />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CYanone+Kaffeesatz:200,300,400,700" rel="stylesheet">
+        <link rel="shortcut icon" href="images/fav-icon.png">
+        <!-- css của các thành viên -->
+        <link rel="stylesheet" type="text/css" href="css/thinh.css" media="all" />
+        <link rel="stylesheet" type="text/css" href="css/hoan.css" media="all" />
+        <link rel="stylesheet" type="text/css" href="css/dat.css" media="all" />
+        <!-- Script -->
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+        <script src="js/angular-route.js"></script>
+        <script src="js/angular-animate.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+        <script src="js/ui-bootstrap-tpls-0.11.0.js"></script>
+        <script src='js/jquery.zoom.js'></script>
+        <!-- Script của các thành viên -->
+        <script type="text/javascript" src="js/thinh.js"></script>
+        <script type="text/javascript" src="js/hoan.js"></script>
+
+   </head>
+   <body ng-app="shopApp" ng-controller="comboController">   
+        <!--Đây là phần header khi  thu nhỏ  -->
+        <header class="container-fluid  d-xl-none ">
+            <div class="test-h  test1-h">
+                <h3 class="close-h" onclick="closeheader()"><span class="test-h-span-h">x</span>     Close</h3>
+                <ul>
+                    <a href="list-product.html#!/pizzas"><li  > <i class="po po-pizza icon-i-h"></i>Pizza</li></a>
+                    <a href="list-product.html#!garlic_breads"><li  > <i class="po po-burger icon-i-h"></i>Sandwiches</li></a>
+                    <a href="list-product.html#!/pizza_sandwiches"><li  > <i class="po po-salads icon-i-h"></i>Garlic Breads</li></a>
+                    <a href="list-product.html#!/desserts"><li  > <i class="po po-tacos icon-i-h"></i>Desserts</li></a>
+                    <a href="list-product.html#!/beverages"><li  class=" li-last-h " ><i class="po po-drinks icon-i-h"></i> Beverages</li></a>
+    
+    
+                    <a href="combo-offers-page.html"><li><i class="po po-wraps icon-i-h"></i>Combo</li></a>
+                    <a href="weekendspecial.html"><li  ><i class="po po-best-quality icon-i-h"></i>Weekend</li></a>
+                    <a href="galary.html"><li  ><i class="po po-master-chef icon-i-h"></i>Gallery</li></a>
+                    <a href="franchise.html"><li  ><i class="po po-load-more-icon icon-i-h"></i>Franchise</li></a>
+                    <a href="store-location.html"><li  ><i class="po po-store-locator-menu icon-i-h"></i>Store location</li></a>
+    
+                </ul>
+    
+            </div>
+            <div class="row header-single-page-t">
+                <nav class="container">
+                    <!-- Thanh menu trên header -->
+                    <ul class="nav row align-items-center nav-single-page-t">
+                        <li class="nav-item col">
+                            <a class="nav-link" href="#"><img src="images/Logo3.png" alt="Logo" class="img-fluid"></a>
+                        </li>
+                        <li class="nav-item col d-lg-none d-xl-block  d-md-none d-sm-none d-none ">
+                            <a href="#">Order online</a>
+                        </li>
+                    </li>
+                    <li class="nav-item col dropdown-header-category-t  d-lg-none d-xl-block  d-md-none d-sm-none d-none">
+                        <a href="#">Catagory<i class="fas fa-caret-down"></i></a>
+                        <div class="dropdown-header-category-div-t">
+                            <ul class="nav flex-column">
+                                <a href="list-product.html#!/pizzas"><li class="nav-item">Pizza</li></a>
+                                <a href="list-product.html#!/garlic_breads"><li class="nav-item">Garlic Breads</li></a>
+                                <a href="list-product.html#!/pizza_sandwiches"><li class="nav-item">Pizza Sandwiches</li></a>
+                                <a href="list-product.html#!/desserts"><li class="nav-item">Desserts</li></a>
+                                <a href="list-product.html#!/beverages"><li class="nav-item">Beverages</li></a>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item col dropdown-header-pages-t d-lg-none d-xl-block  d-md-none d-sm-none d-none">
+                        <a href="#">Pages<i class="fas fa-caret-down"></i></a>
+                        <div class="dropdown-header-pages-div-t">
+                            <ul class="nav flex-column">
+                                <a href="#!/location"><li class="nav-item">Location</li></a>
+                                <a href="combo-offers-page.html"><li class="nav-item">Combo</li></a>
+                                <a href="weekendspecial.html"><li class="nav-item">Weekend Special</li></a>
+                                <a href="franchise.html"><li class="nav-item">Franchise Info</li></a>
+                                <a href="galary.html"><li class="nav-item">Gallery</li></a>
+                                <a href="store-location.html"><li class="nav-item">Store Location</li></a>
+                                <a href="contactus.html"><li class="nav-item">Contact Us</li></a>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item col d-lg-none d-xl-block  d-md-none d-sm-none d-none">
+                        <a href="#!/storelocation">Store Location</a>
+                    </li>
+                    <li class="nav-item col dropdown-header-cart-t d-lg-none d-xl-block  d-md-none d-sm-none d-none">
+                        <a href="cart-page.html" class="cart-link-home-t d-inline">
+                            <i class="po po-scooter"><span class="count-item-t">0</span></i>
+                            <span class="amount-money-home-t d-inline">$21.8</span>
+                            <div class="dropdown-header-cart-div-t">
+                                No product in cart
+                            </div>
+                        </a>
+                    </li>
+                    <li class="icon-responsive-h" onclick="closeheader()"><i class="fas fa-align-justify"></i> </li>
+                </ul>
+            </nav>
+        </header>
+        <!-- Đây là header -->
+        <header class="container-fluid d-lg-none d-xl-block  d-md-none d-sm-none d-none">
+            <div class="row header-single-page-t">
+                <nav class="container">
+                    <!-- Thanh menu trên header -->
+                    <ul class="nav row align-items-center nav-single-page-t no-gutters">
+                        <li class="nav-item col">
+                            <a class="nav-link" href="home-page.html"><img src="images/Logo3.png" alt="Logo" class="img-fluid"></a>
+                        </li>
+                        <li class="nav-item col">
+                            <a href="home-page.html">Home</a>
+                        </li>
+                                    </li>
+                        <li class="nav-item col dropdown-header-category-t ">
+                            <a href="#">Menu<i class="fas fa-caret-down"></i></a>
+                            <div class="dropdown-header-category-div-t">
+                                <ul class="nav flex-column">
+                                    <a href="list-product.html#!/pizzas" ng-click="changecategorylistpage()"><li class="nav-item">Pizza</li></a>
+                                    <a href="list-product.html#!/garlic_breads" ng-click="changecategorylistpage()"><li class="nav-item">Garlic Breads</li></a>
+                                    <a href="list-product.html#!/pizza_sandwiches" ng-click="changecategorylistpage()"><li class="nav-item">Pizza Sandwiches</li></a>
+                                    <a href="list-product.html#!/desserts" ng-click="changecategorylistpage()"><li class="nav-item">Desserts</li></a>
+                                    <a href="list-product.html#!/beverages" ng-click="changecategorylistpage()"><li class="nav-item">Beverages</li></a>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item col">
+                            <a href="images/downloadmenu.jpg" download>Menu<br>Download</a>
+                        </li>
+                        <li class="nav-item col">
+                            <a href="store-location.html">Store<br>Location</a>
+                        </li>
+                        <li class="nav-item col">
+                            <a href="location.html">Location</a>
+                        </li>
+                        <li class="nav-item col">
+                            <a href="feedback.html">Feedback</a>
+                        </li>
+                        <li class="nav-item col">
+                            <a href="franchise.html">Franchise</a>
+                        </li>
+                        <li class="nav-item col dropdown-header-pages-t">
+                            <a href="#">Pages<i class="fas fa-caret-down"></i></a>
+                            <div class="dropdown-header-pages-div-t">
+                                <ul class="nav flex-column">
+                                    <a href="combo-offers-page.html"><li class="nav-item">Combo</li></a>
+                                    <a href="weekendspecial.html"><li class="nav-item">Weekend Special</li></a>
+                                    <a href="galary.html"><li class="nav-item">Gallery</li></a>
+                                    <a href="contactus.html"><li class="nav-item">Contact Us</li></a>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="nav-item col dropdown-header-cart-t">
+                            <a href="cart-page.html" class="cart-link-home-t d-inline">
+                                <i class="po po-scooter"><span class="count-item-t">2</span></i>
+                                <span class="amount-money-home-t d-inline">$21.8</span>
+                                <div class="dropdown-header-cart-div-t font-weight-normal ">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th colspan="2">Product</th>
+                                                <th>Total</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1x</td>
+                                                <td>Black Coffee</td>
+                                                <td>£1.90</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1x</td>
+                                                <td>Hot Cappuccino</td>
+                                                <td>£1.90</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1x</td>
+                                                <td>Iced Coffee</td>
+                                                <td>£1.90</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1x</td>
+                                                <td>Pizzaro Coffee</td>
+                                                <td>£19.9</td>
+                                            </tr>
+                                        </tbody>
+                                        <thead>
+                                            <tr>
+                                                <th colspan="2">Subtotal</th>
+                                                <th>£21.8</th>
+                                            </tr>
+                                        </thead>
+                                        <thead>
+                                            <tr>
+                                                <th colspan="2">Total</th>
+                                                <th>£21.8</th>
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!-- Header nav trang chủ và trang single page -->
+        <div class="category-home-t d-lg-none d-xl-block  d-md-none d-sm-none d-none">
+            <div class="container">
+                <ul class="row align-items-center">
+                    <li class="catagory-li-single-page-t col"><a class="catagory-link-single-page-t" href="combo-offers-page.html"><i class="po po-fries icon-i-h"></i>Combo</a></li>
+                    <li class="catagory-li-single-page-t col"><a class="catagory-link-single-page-t" href="weekendspecial.html"><i class="po po-best-quality icon-i-h"></i>Weekend</a></li>
+                    <li class="catagory-li-single-page-t col"><a class="catagory-link-single-page-t" href="galary.html"><i class="po po-master-chef icon-i-h"></i>Gallery</a></li>
+                    <li class="catagory-li-single-page-t col"><a class="catagory-link-single-page-t" href="store-location.html"><i class="po po-store-locator-menu icon-i-h"></i>Location</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Đây là nội dung của galary -->
+        <div class="container-fluid d">
+            <div class="row">
+                <figure class="">
+                    <img src=images/gallery01.jpg width="100%" height="100%">
+                </figure>
+            </div>
+            <div class="about text-center">
+                <h3>Gallery</h3>
+                <p> Bộ sưu tập ảnh của chúng tôi </p>
+                <br></div>
+            <div class="container d">
+                <div class="row">
+                    <div class="container-gallary-d">
+                        <div class="box-gallary-d">
+                            <div class="imgBox-gallary-d">
+                                <img src="images/gallery02.jpg">
+                            </div>
+                            <div class="content-gallary-d">
+                                <h2>Taste Driven</h2>
+                                <p>Mauris tempus erat laoreet turpis lobortis, eu tincidunt erat fermentum. Aliquam non tincidunt urna. Integer tincidunt nec nisl vitae ullamcorper. Proin sed ultrices erat. </p>
+                            </div>
+                        </div>
+                        <div class="box-gallary-d">
+                            <div class="imgBox-gallary-d">
+                                <img src="images/gallery03.jpg">
+                            </div>
+                            <div class="content-gallary-d">
+                                <h2>Made the Quality Way</h2>
+                                <p>	Mauris tempus erat laoreet turpis lobortis, eu tincidunt erat fermentum.
+                                    Be Bold // Do Everything Better
+                                    Be Open // Work Stronger Together. </p>
+                            </div>
+                        </div>
+                        <div class="box-gallary-d">
+                            <div class="imgBox-gallary-d">
+                                <img src="images/gallery04.jpg">
+                            </div>
+                            <div class="content-gallary-d">
+                                <h2>Family of Creators</h2>
+                                <p>Mauris tempus erat laoreet turpis lobortis, eu tincidunt erat fermentum. Aliquam non tincidunt urna. Integer tincidunt nec nisl vitae ullamcorper. Proin sed ultrices erat. </p>
+                            </div>
+                        </div>
+                        <div class="box-gallary-d">
+                            <div class="imgBox-gallary-d">
+                                <img src="images/gallery05.jpg">
+                            </div>
+                            <div class="content-gallary-d">
+                                <h2>Taste Driven</h2>
+                                <p>Mauris tempus erat laoreet turpis lobortis, eu tincidunt erat fermentum. Aliquam non tincidunt urna. Integer tincidunt nec nisl vitae ullamcorper. Proin sed ultrices erat.</p>
+                            </div>
+                        </div>
+                        <div class="box-gallary-d">
+                            <div class="imgBox-gallary-d">
+                                <img src="images/gallery06.jpg">
+                            </div>
+                            <div class="content-gallary-d">
+                                <h2>Made the Quality Way</h2>
+                                <p>Mauris tempus erat laoreet turpis lobortis, eu tincidunt erat fermentum.
+                                    Be Bold // Do Everything Better
+                                    Be Open // Work Stronger Together. </p>
+                            </div>
+                        </div>
+                        <div class="box-gallary-d">
+                            <div class="imgBox-gallary-d">
+                                <img src="images/gallery07.jpg">
+                            </div>
+                            <div class="content-gallary-d">
+                                <h2>Family of Creators</h2>
+                                <p>Mauris tempus erat laoreet turpis lobortis, eu tincidunt erat fermentum. Aliquam non tincidunt urna. Integer tincidunt nec nisl vitae ullamcorper. Proin sed ultrices erat.</p>
+                            </div>
+                        </div>
+                        <div class="box-gallary-d">
+                            <div class="imgBox-gallary-d">
+                                <img src="images/gallery08.jpg">
+                            </div>
+                            <div class="content-gallary-d">
+                                <h2>Taste Driven</h2>
+                                <p>Mauris tempus erat laoreet turpis lobortis, eu tincidunt erat fermentum. Aliquam non tincidunt urna. Integer tincidunt nec nisl vitae ullamcorper. Proin sed ultrices erat. </p>
+                            </div>
+                        </div>
+                        <div class="box-gallary-d">
+                            <div class="imgBox-gallary-d">
+                                <img src="images/gallery09.jpg">
+                            </div>
+                            <div class="content-gallary-d">
+                                <h2>Made the Quality Way</h2>
+                                <p>Mauris tempus erat laoreet turpis lobortis, eu tincidunt erat fermentum.
+                                    Be Bold // Do Everything Better
+                                    Be Open // Work Stronger Together. </p>
+                            </div>
+                        </div>
+                        <div class="box-gallary-d">
+                            <div class="imgBox-gallary-d">
+                                <img src="images/gallery10.jpg">
+                            </div>
+                            <div class="content-gallary-d">
+                                <h2>Family of Creators</h2>
+                                <p>Mauris tempus erat laoreet turpis lobortis, eu tincidunt erat fermentum. Aliquam non tincidunt urna. Integer tincidunt nec nisl vitae ullamcorper. Proin sed ultrices erat.</p>
+                            </div>
+                        </div>
+                        <div class="box-gallary-d">
+                            <div class="imgBox-gallary-d">
+                                <img src="images/gallery11.jpg">
+                            </div>
+                            <div class="content-gallary-d">
+                                <h2>Taste Driven</h2>
+                                <p>Mauris tempus erat laoreet turpis lobortis, eu tincidunt erat fermentum. Aliquam non tincidunt urna. Integer tincidunt nec nisl vitae ullamcorper. Proin sed ultrices erat. </p>
+                            </div>
+                        </div>
+                        <div class="box-gallary-d">
+                            <div class="imgBox-gallary-d">
+                                <img src="images/gallery12.jpg">
+                            </div>
+                            <div class="content-gallary-d">
+                                <h2>Made the Quality Way</h2>
+                                <p>Mauris tempus erat laoreet turpis lobortis, eu tincidunt erat fermentum.
+                                    Be Bold // Do Everything Better
+                                    Be Open // Work Stronger Together. </p>
+                            </div>
+                        </div>
+                        <div class="box-gallary-d">
+                            <div class="imgBox-gallary-d">
+                                <img src="images/gallery13.jpg">
+                            </div>
+                            <div class="content-gallary-d">
+                                <h2>Family of Creators</h2>
+                                <p>Mauris tempus erat laoreet turpis lobortis, eu tincidunt erat fermentum. Aliquam non tincidunt urna. Integer tincidunt nec nisl vitae ullamcorper. Proin sed ultrices erat.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <figure class="image-d">
+                    <img src=images/gallery15.jpg width="100%" height="100%">
+                </figure>
+            </div>
+            <div class="container ">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <h3>Pizza Basics</h3>
+                    </div>
+                    <div class="col-sm-4">
+                        <p class="card-text text-justify">
+                            Mauris tempus erat laoreet turpis lobortis, eu tincidunt erat fermentum. Aliquam non tincidunt urna. Integer tincidunt nec
+                            nisl vitae ullamcorper. Proin sed ultrices erat.
+                        </p>
+                    </div>
+                    <div class="col-sm-4">
+                        <p class="card-text text-justify">Mauris tempus erat laoreet turpis lobortis, eu tincidunt erat fermentum. Aliquam non tincidunt urna.
+                            Integer tincidunt nec nisl vitae ullamcorper. Proin sed ultrices erat.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col d1-pagegalary"><img src=images/gallery02.jpg width=100% height="200px"></div>
+                <div class="col d1-pagegalary"><img src=images/gallery03.jpg width=100% height="200px"></div>
+                <div class="col d1-pagegalary"><img src=images/gallery04.jpg width=100% height="200px"></div>
+                <div class="col d1-pagegalary"><img src=images/gallery05.jpg width=100% height="200px"></div>
+                <div class="col d1-pagegalary"><img src=images/gallery06.jpg width=100% height="200px"></div>
+                <div class="col d1-pagegalary"><img src=images/gallery06.jpg width=100% height="200px"></div>
+            </div>
+        </div>
+        <!-- Đây là block footer -->
+        <footer class="container-fluid footer-block-d">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 offset-md-4">
+                        <span class="badge badge-pill badge-primary"><i class="fab fa-facebook-f"></i></span>	
+                        <span class="badge badge-pill badge-success"><i class="fab fa-twitter"></i></span>
+                        <span class="badge badge-pill badge-warning"><i class="fab fa-instagram"></i></span>
+                        <span class="badge badge-pill badge-danger"><i class="fab fa-youtube"></i></span>
+                        <span class="badge badge-pill badge-info">Z</span>
+                    </div>
+                </div>
+                <div class="row logo">
+        
+                        <a href="#"><img src="images/Logo4.png"></a>
+        
+                    </div>
+                <div class="row">
+                    <div class=" info col-md-12 offset-md-3 d">
+                    <p> Nhà Hàng Pizza   |    Số 8 Tôn Thất Thuyết, Mỹ Đình 2, Nam Từ Liêm, Hà Nội   |    Tel: 0981356222   |   Fax: 0981356222</p>
+                    <p> Copyright © 2017 Pizzaro Theme. All rights reserved.</p>
+                    </div>
+                    <div class=" find p-3 bg-danger text-white"> <a href="https://www.google.com/maps"> <i class="fas fa-map-marker-alt"></i> Find Us On Map </a></div>
+                </div>
+            </div>
+        </footer>
+   </body>
+</html>
